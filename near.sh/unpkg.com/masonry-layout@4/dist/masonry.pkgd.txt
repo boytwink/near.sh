@@ -1,0 +1,1 @@
+<meta http-equiv="refresh" content="0; url=../../masonry-layout@4.2.2/dist/masonry.pkgd.js">

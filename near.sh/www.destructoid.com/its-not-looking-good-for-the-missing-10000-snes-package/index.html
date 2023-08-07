@@ -1,0 +1,498 @@
+<!doctype html><html lang="en-CA"><head><meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-25dbf0ab1e84acf5884",applicationID:"518919792"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){d("pageHide",[p.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("https://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1209.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="profile" href="https://gmpg.org/xfn/11"><link rel="icon" type="image/png" href="../wp-content/themes/destructoid/inc/images/dtoid-favicon.jpg" /> <script>//APS
+        !function(e){var s=new XMLHttpRequest;s.open("GET","https://api.enthusiastgaming.net/scripts/cdn.enthusiast.gg/script/eg-aps/release/eg-aps-bootstrap-v2.0.0.bundle.js?site=destructoid.com",!0),s.onreadystatechange=function(){var t;4==s.readyState&&(200<=s.status&&s.status<300||304==s.status)&&((t=e.createElement("script")).type="text/javascript",t.text=s.responseText,e.head.appendChild(t))},s.send(null)}((window,document));
+        //GTM
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PGQLTQD');</script> <script src="../../code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> <script src="../../cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> <link rel="stylesheet" href="../../stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> <script src="../../stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> <script src="../../kit.fontawesome.com/ae48e85700.js" crossorigin="anonymous"></script> <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' /><link media="all" href="../wp-content/uploads/autoptimize/css/autoptimize_8adfb706243c4504495c8ab64c5f8bf5.css" rel="stylesheet" /><title>It&#039;s not looking good for the missing $10,000 SNES package &ndash; Destructoid</title><link rel="canonical" href="" /><meta property="og:locale" content="en_US" /><meta property="og:type" content="article" /><meta property="og:title" content="It&#039;s not looking good for the missing $10,000 SNES package &ndash; Destructoid" /><meta property="og:description" content="Byuu&#8217;s clues Earlier this week, we reported on a missing shipment of 100 classic Super Nintendo (SNES) games that went..." /><meta property="og:url" content="https://www.destructoid.com/its-not-looking-good-for-the-missing-10000-snes-package/" /><meta property="og:site_name" content="Destructoid" /><meta property="article:publisher" content="https://www.facebook.com/Destructoid/" /><meta property="article:published_time" content="2017-02-18T22:00:00+00:00" /><meta property="og:image" content="https://v1cdn.destructoid.com/tracking-noscale.jpg" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:creator" content="@destructoid" /><meta name="twitter:site" content="@destructoid" /> <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.destructoid.com/#organization","name":"Destructoid","url":"https://www.destructoid.com/","sameAs":["https://www.facebook.com/Destructoid/","https://www.instagram.com/destructoid/","https://www.linkedin.com/company/destructoid.com/","https://www.youtube.com/user/DTOID","https://twitter.com/destructoid"],"logo":{"@type":"ImageObject","@id":"https://www.destructoid.com/#logo","inLanguage":"en-CA","url":"https://www.destructoid.com/wp-content/uploads/2020/09/destructoid-logo-new.png","contentUrl":"https://www.destructoid.com/wp-content/uploads/2020/09/destructoid-logo-new.png","width":611,"height":104,"caption":"Destructoid"},"image":{"@id":"https://www.destructoid.com/#logo"}},{"@type":"WebSite","@id":"https://www.destructoid.com/#website","url":"https://www.destructoid.com/","name":"Destructoid","description":"Probably About Video Games","publisher":{"@id":"https://www.destructoid.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://www.destructoid.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-CA"},{"@type":"ImageObject","@id":"https://www.destructoid.com/its-not-looking-good-for-the-missing-10000-snes-package/#primaryimage","inLanguage":"en-CA","url":"https://www.destructoid.com/wp-content/uploads/2020/12/419521-Have-you-seen-x3.jpg","contentUrl":"https://www.destructoid.com/wp-content/uploads/2020/12/419521-Have-you-seen-x3.jpg","width":2000,"height":1127},{"@type":"WebPage","@id":"https://www.destructoid.com/its-not-looking-good-for-the-missing-10000-snes-package/#webpage","url":"https://www.destructoid.com/its-not-looking-good-for-the-missing-10000-snes-package/","name":"It's not looking good for the missing $10,000 SNES package &ndash; Destructoid","isPartOf":{"@id":"https://www.destructoid.com/#website"},"primaryImageOfPage":{"@id":"https://www.destructoid.com/its-not-looking-good-for-the-missing-10000-snes-package/#primaryimage"},"datePublished":"2017-02-18T22:00:00+00:00","dateModified":"2017-02-18T22:00:00+00:00","breadcrumb":{"@id":"https://www.destructoid.com/its-not-looking-good-for-the-missing-10000-snes-package/#breadcrumb"},"inLanguage":"en-CA","potentialAction":[{"@type":"ReadAction","target":["https://www.destructoid.com/its-not-looking-good-for-the-missing-10000-snes-package/"]}]},{"@type":"BreadcrumbList","@id":"https://www.destructoid.com/its-not-looking-good-for-the-missing-10000-snes-package/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://www.destructoid.com/","url":"https://www.destructoid.com/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://www.destructoid.com/more-news/","url":"https://www.destructoid.com/more-news/","name":"More News"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.destructoid.com/its-not-looking-good-for-the-missing-10000-snes-package/#webpage"}}]},{"@type":["Article","NewsArticle"],"@id":"https://www.destructoid.com/its-not-looking-good-for-the-missing-10000-snes-package/#article","isPartOf":{"@id":"https://www.destructoid.com/its-not-looking-good-for-the-missing-10000-snes-package/#webpage"},"author":{"@id":"https://www.destructoid.com/#/schema/person/342f7a2b9a982a412968d7556383b3b6"},"headline":"It&#8217;s not looking good for the missing $10,000 SNES package","datePublished":"2017-02-18T22:00:00+00:00","dateModified":"2017-02-18T22:00:00+00:00","mainEntityOfPage":{"@id":"https://www.destructoid.com/its-not-looking-good-for-the-missing-10000-snes-package/#webpage"},"wordCount":723,"commentCount":0,"publisher":{"@id":"https://www.destructoid.com/#organization"},"image":{"@id":"https://www.destructoid.com/its-not-looking-good-for-the-missing-10000-snes-package/#primaryimage"},"thumbnailUrl":"https://www.destructoid.com/wp-content/uploads/2020/12/419521-Have-you-seen-x3.jpg","keywords":["Emulators","History"],"articleSection":["News"],"inLanguage":"en-CA","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://www.destructoid.com/its-not-looking-good-for-the-missing-10000-snes-package/#respond"]}],"copyrightYear":"2017","copyrightHolder":{"@id":"https://www.destructoid.com/#organization"}},{"@type":"Person","@id":"https://www.destructoid.com/#/schema/person/342f7a2b9a982a412968d7556383b3b6","name":"Kevin McClusky","image":{"@type":"ImageObject","@id":"https://www.destructoid.com/#personlogo","inLanguage":"en-CA","url":"https://www.destructoid.com/wp-content/uploads/2021/01/destructoid-logo-small.png","contentUrl":"https://www.destructoid.com/wp-content/uploads/2021/01/destructoid-logo-small.png","caption":"Kevin McClusky"},"description":"I'm a longtime member of Destructoid, and you may have known me in a prior life as Qalamari. In other words, hi. I've been here a long time. There's a good chance I'm older than you. I write freelance articles for other publications, so you might see my name elsewhere occasionally. Disclosure: I wrote a paid testimonial for the Speedify VPN service in April 2017.","url":"https://www.destructoid.com/author/kevin-mcclusky/"}]}</script> <link rel="amphtml" href="https://www.destructoid.com/its-not-looking-good-for-the-missing-10000-snes-package/amp/" /><meta name="generator" content="AMP for WP 1.0.77.4" /><link rel='dns-prefetch' href='//www.destructoid.com' /><link rel="alternate" type="application/rss+xml" title="Destructoid &raquo; Feed" href="https://www.destructoid.com/feed/" /><link rel="alternate" type="application/rss+xml" title="Destructoid &raquo; Comments Feed" href="https://www.destructoid.com/comments/feed/" /><link rel="alternate" type="application/rss+xml" title="Destructoid &raquo; It&#8217;s not looking good for the missing $10,000 SNES package Comments Feed" href="https://www.destructoid.com/its-not-looking-good-for-the-missing-10000-snes-package/feed/" /> <script src="../../www.googletagmanager.com/gtag/js;id=UA-550649-1" type="text/javascript" data-cfasync="false"></script> <script type="text/javascript" data-cfasync="false">var mi_version = '7.17.0';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStr = 'ga-disable-UA-550649-1';
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					return document.cookie.indexOf( disableStr + '=true' ) > - 1;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if ( __gtagTrackerIsOptedOut() ) {
+					window[disableStr] = true;
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+					window[disableStr] = true;
+				}
+
+				if ( 'undefined' === typeof gaOptout ) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+				if ( mi_track_user ) {
+					function __gtagTracker() {dataLayer.push( arguments );}
+					__gtagTracker( 'js', new Date() );
+					__gtagTracker( 'set', {
+						'developer_id.dZGIzZG' : true,
+						'dimension1' : 'Kevin','dimension7' : 'focus_keyword_not_set','dimension8' : 'Emulators,History','dimension9' : 'news','dimension10' : '4 years ago','dimension11' : 'na',                    });
+					__gtagTracker( 'config', 'UA-550649-1', {
+						forceSSL:true,link_attribution:true,					} );
+										window.gtag = __gtagTracker;										(
+						function () {
+							/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+							/* ga and __gaTracker compatibility shim. */
+							var noopfn = function () {
+								return null;
+							};
+							var newtracker = function () {
+								return new Tracker();
+							};
+							var Tracker = function () {
+								return null;
+							};
+							var p = Tracker.prototype;
+							p.get = noopfn;
+							p.set = noopfn;
+							p.send = function (){
+								var args = Array.prototype.slice.call(arguments);
+								args.unshift( 'send' );
+								__gaTracker.apply(null, args);
+							};
+							var __gaTracker = function () {
+								var len = arguments.length;
+								if ( len === 0 ) {
+									return;
+								}
+								var f = arguments[len - 1];
+								if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+									if ( 'send' === arguments[0] ) {
+										var hitConverted, hitObject = false, action;
+										if ( 'event' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[3] ) {
+												hitObject = {
+													'eventAction': arguments[3],
+													'eventCategory': arguments[2],
+													'eventLabel': arguments[4],
+													'value': arguments[5] ? arguments[5] : 1,
+												}
+											}
+										}
+										if ( typeof arguments[2] === 'object' ) {
+											hitObject = arguments[2];
+										}
+										if ( typeof arguments[5] === 'object' ) {
+											Object.assign( hitObject, arguments[5] );
+										}
+										if ( 'undefined' !== typeof (
+											arguments[1].hitType
+										) ) {
+											hitObject = arguments[1];
+										}
+										if ( hitObject ) {
+											action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+											hitConverted = mapArgs( hitObject );
+											__gtagTracker( 'event', action, hitConverted );
+										}
+									}
+									return;
+								}
+
+								function mapArgs( args ) {
+									var gaKey, hit = {};
+									var gaMap = {
+										'eventCategory': 'event_category',
+										'eventAction': 'event_action',
+										'eventLabel': 'event_label',
+										'eventValue': 'event_value',
+										'nonInteraction': 'non_interaction',
+										'timingCategory': 'event_category',
+										'timingVar': 'name',
+										'timingValue': 'value',
+										'timingLabel': 'event_label',
+									};
+									for ( gaKey in gaMap ) {
+										if ( 'undefined' !== typeof args[gaKey] ) {
+											hit[gaMap[gaKey]] = args[gaKey];
+										}
+									}
+									return hit;
+								}
+
+								try {
+									f.hitCallback();
+								} catch ( ex ) {
+								}
+							};
+							__gaTracker.create = newtracker;
+							__gaTracker.getByName = newtracker;
+							__gaTracker.getAll = function () {
+								return [];
+							};
+							__gaTracker.remove = noopfn;
+							__gaTracker.loaded = true;
+							window['__gaTracker'] = __gaTracker;
+						}
+					)();
+									} else {
+										console.log( "" );
+					( function () {
+							function __gtagTracker() {
+								return null;
+							}
+							window['__gtagTracker'] = __gtagTracker;
+							window['gtag'] = __gtagTracker;
+					} )();
+									}</script> <script id='monsterinsights-frontend-script-js-extra'>var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/www.destructoid.com","hash_tracking":"false","ua":"UA-550649-1"};</script> <script src="../wp-includes/js/jquery/jquery.min.js" id='jquery-core-js'></script> <script id='zxcvbn-async-js-extra'>var _zxcvbnSettings = {"src":"https:\/\/www.destructoid.com\/wp-includes\/js\/zxcvbn.min.js"};</script> <link rel="https://api.w.org/" href="https://www.destructoid.com/wp-json/" /><link rel="alternate" type="application/json" href="https://www.destructoid.com/wp-json/wp/v2/posts/196274" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.destructoid.com/xmlrpc.php?rsd" /><link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.destructoid.com/wp-includes/wlwmanifest.xml" /><meta name="generator" content="WordPress 5.7.2" /><link rel='shortlink' href='https://www.destructoid.com/?p=196274' /><link rel="alternate" type="application/json+oembed" href="https://www.destructoid.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.destructoid.com%2Fits-not-looking-good-for-the-missing-10000-snes-package%2F" /><link rel="alternate" type="text/xml+oembed" href="https://www.destructoid.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.destructoid.com%2Fits-not-looking-good-for-the-missing-10000-snes-package%2F&#038;format=xml" /><meta name="BridPlugin" content="site:10260|oauth_token:01110011 01100101 01100011 01110010 01100101 01110100|ver:3.5.6|widget:1|disable_video_autosave:|channels:Array|width:640|height:360|autoplay:0|aspect:1|user_id:9147|default_channel:18|ovr_def:1|async_embed:0|google_seo:0|raw_embed:0|unit:5957|unit_width:400|unit_height:225|player:12899|video_image:|onready:" /><link rel="pingback" href="https://www.destructoid.com/xmlrpc.php"></head><body class="post-template-default single single-post postid-196274 single-format-standard wp-custom-logo dark-mode-enabled"> <noscript><iframe src="../../www.googletagmanager.com/ns;id=GTM-PGQLTQD.html"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script type="text/javascript">;(function (window, document, undefined) {
+        var body = document.body;
+
+        // If user doesnt have local storage, leave this function
+        if (!('localStorage' in window)) return;
+        var nightMode = localStorage.getItem('themeSwitch');
+
+        if(nightMode == null){
+            localStorage.setItem('themeSwitch', true);
+            body.classList.add("dark-mode-enabled");
+        } else if (nightMode === 'false') {
+            body.classList.remove("dark-mode-enabled");
+        } else {
+            body.classList.add("dark-mode-enabled");
+        }
+
+    })(window, document);
+
+	// Flip the cookie after toggle has been clicked
+    function toggleDarkMode() {
+
+        // Fetch the value from localstorage
+        var nightMode = localStorage.getItem('themeSwitch');
+        var body = document.body;
+
+		// Check to see if we are on a single page template, if we are, we need to redirect because disqus cannot read the switching of the colors
+		if(body.classList.contains('single')) {
+			if(nightMode === 'true') {
+				localStorage.setItem('themeSwitch', false);
+				location.reload();
+			} else {
+				localStorage.setItem('themeSwitch', true);
+				location.reload();
+			}
+		} else {
+			if(nightMode === 'true') {
+				localStorage.setItem('themeSwitch', false);
+				document.body.classList.remove("dark-mode-enabled");
+			} else {
+				localStorage.setItem('themeSwitch', true);
+				document.body.classList.add("dark-mode-enabled");
+			}
+		}
+    }</script> <div class="eg-ad site-skin"><div id="div-gpt-ad-1491417377896-0"></div></div><div id="page" class="site"><header id="masthead" class="site-header"><div class="container"><div class="site-header-inner"><div class="header-toggle"><div class="d-flex align-items-center"><div class="theme-switch-wrapper"><div class="theme-switch"><div class="switch" onclick="toggleDarkMode()"></div></div></div><p class="dark-mode-text ml-1">dark</p></div></div><div class="site-branding"><div class="d-flex align-items-center justify-content-between"><div> <a href="https://www.destructoid.com"> <img class="logo-large" src="../wp-content/themes/destructoid/inc/images/destructoid-logo-large.png" alt="Destructoid" width="611" height="104"> <img class="logo-small" src="../wp-content/themes/destructoid/inc/images/destructoid-logo-small.png" alt="Destructoid" width="100" height="100"> </a></div></div></div><nav id="site-navigation" class="main-navigation"><div class="menu-main-menu-container"><ul id="primary-menu" class="menu"><li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-10"><a href="">Topics</a><ul class="sub-menu"><li id="menu-item-266709" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266709"><a href="https://www.destructoid.com/tag/ps5/">PS5</a></li><li id="menu-item-266710" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266710"><a href="https://www.destructoid.com/tag/ps4/">PS4</a></li><li id="menu-item-2915" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2915"><a href="https://www.destructoid.com/tag/switch/">Switch</a></li><li id="menu-item-266712" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266712"><a href="https://www.destructoid.com/tag/xbox-series-x/">Xbox Series X</a></li><li id="menu-item-266711" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266711"><a href="https://www.destructoid.com/tag/xbox-series-s/">Xbox Series S</a></li><li id="menu-item-266713" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266713"><a href="https://www.destructoid.com/tag/xbox-one/">Xbox One</a></li><li id="menu-item-266714" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266714"><a href="https://www.destructoid.com/tag/pc/">PC</a></li><li id="menu-item-266715" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266715"><a href="https://www.destructoid.com/tag/3ds/">3DS</a></li><li id="menu-item-266716" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266716"><a href="https://www.destructoid.com/tag/ps-vita/">PS Vita</a></li><li id="menu-item-2920" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2920"><a href="https://www.destructoid.com/tag/film-or-tv/">Film &#038; Movies</a></li><li id="menu-item-111" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111"><a href="">Japanese Games</a></li><li id="menu-item-2921" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-2921"><a href="https://www.destructoid.com/tag/virtual-reality/">Virtual Reality</a></li><li id="menu-item-266717" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266717"><a href="https://www.destructoid.com/tag/action/">Action</a></li><li id="menu-item-266718" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266718"><a href="https://www.destructoid.com/tag/indie/">Indie</a></li><li id="menu-item-266719" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266719"><a href="https://www.destructoid.com/tag/fighting-games/">Fighting</a></li><li id="menu-item-266720" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266720"><a href="https://www.destructoid.com/tag/mmo/">MMO</a></li><li id="menu-item-266721" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266721"><a href="https://www.destructoid.com/tag/music/">Music</a></li><li id="menu-item-266722" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266722"><a href="https://www.destructoid.com/tag/platform-games/">Platformers</a></li><li id="menu-item-266723" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266723"><a href="https://www.destructoid.com/tag/puzzle-games/">Puzzle</a></li><li id="menu-item-266724" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266724"><a href="https://www.destructoid.com/tag/racing-games/">Racing</a></li><li id="menu-item-266725" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266725"><a href="https://www.destructoid.com/tag/role-playing-games/">RPGs</a></li><li id="menu-item-266726" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266726"><a href="https://www.destructoid.com/tag/sports/">Sports</a></li><li id="menu-item-266727" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266727"><a href="https://www.destructoid.com/tag/first-person-shooter/">Shooters</a></li><li id="menu-item-266728" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266728"><a href="https://www.destructoid.com/tag/strategy-games/">Strategy</a></li></ul></li><li id="menu-item-76" class="menu-item menu-item-type-post_type_archive menu-item-object-eg_reviews menu-item-76"><a href="https://www.destructoid.com/reviews/">Reviews</a></li><li id="menu-item-267487" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-267487"><a href="https://www.destructoid.com/?t=Destructoid+Originals">Features</a></li><li id="menu-item-266707" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266707"><a href="https://www.destructoid.com/tag/video/">Videos</a></li><li id="menu-item-2848" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2848"><a href="https://www.destructoid.com/popular/">Popular</a></li><li id="menu-item-266708" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-266708"><a href="https://www.destructoid.com/tag/podcasts/">Podcasts</a></li><li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13"><a href="https://www.destructoid.com/blogs/?qp=1">Qtoid</a></li><li id="menu-item-267489" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-267489"><a href="https://www.destructoid.com/blogs/?qp=0">Blogs</a></li><li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a target="_blank" rel="noopener" href="https://forums.destructoid.com/">Forums</a></li></ul></div></nav><div class="mobile-button"> <button class="btn-block mt-3"><i class="fas fa-bars"></i><span class="ml-1">Menu</span></button></div></div></div><div class="container"><div class="header-search-panel"><form role="search" method="get" class="search-form" action="https://www.destructoid.com/"> <label> <span class="screen-reader-text">Search for:</span> <input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" /> </label> <input type="submit" class="search-submit" value="Search" /></form></div></div></header><div class="container"><div class="eg-ad header"><div class="abc-123-def wide"><div id="div-gpt-ad-1491417377896-6"></div></div></div></div><div class="container"><main id="primary" class="site-main"><div class="row"><div class="col-lg-8"><article id="post-196274" class="post-196274 post type-post status-publish format-standard has-post-thumbnail hentry category-news tag-emulators tag-history"><header class="entry-header"><h1 class="entry-title">It&#8217;s not looking good for the missing $10,000 SNES package</h1><div class="entry-meta"><div class="d-flex justify-content-between align-items-center"><div class="post-data"> <span> Posted <strong data-toggle="tooltip" data-placement="top" title="2017-02-18 17:00:00"> 4 years ago</strong> by <a href="https://www.destructoid.com/author/kevin-mcclusky/">Kevin McClusky</a> </span></div><div> <a href=""><div class="article-comments-count"><div class="icon-wrapper"> <i class="far fa-comments pr-1" aria-hidden="true"></i> <span class="post-comments disqus-comment-count" data-disqus-identifier="Destructoid_419521">&nbsp;</span></div></div> </a></div></div></div></header><div class="post-thumbnail"> <img width="2000" height="1127" src="../wp-content/uploads/2020/12/419521-Have-you-seen-x3.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://www.destructoid.com/wp-content/uploads/2020/12/419521-Have-you-seen-x3.jpg 2000w, https://www.destructoid.com/wp-content/uploads/2020/12/419521-Have-you-seen-x3-300x169.jpg 300w, https://www.destructoid.com/wp-content/uploads/2020/12/419521-Have-you-seen-x3-1024x577.jpg 1024w, https://www.destructoid.com/wp-content/uploads/2020/12/419521-Have-you-seen-x3-768x433.jpg 768w, https://www.destructoid.com/wp-content/uploads/2020/12/419521-Have-you-seen-x3-1536x866.jpg 1536w" sizes="(max-width: 2000px) 100vw, 2000px" /></div><div class="entry-content"><h2>Byuu&#8217;s clues</h2><p>Earlier this week, we reported on a <a href="https://www.destructoid.com/-10-000-worth-of-snes-history-is-missing-418813.phtml" target="_blank" rel="noopener noreferrer">missing shipment of 100 classic Super Nintendo (SNES) games</a> that went missing on their way to an archivist in New Jersey. There&#8217;s been some movement in the case since then, but unfortunately, the news isn&#8217;t good.</p><p><img src="../../v1cdn.destructoid.com/tracking-noscale.jpg" border="0"><sub>The original tracking information for the missing package. Byuu says the first shipment took just ten days to reach him.</sub></p><p>To briefly recap the earlier story, game historian Byuu was working with a collector in Frankfurt, Germany, borrowing games to create pristine ROM files for games that were released in Europe&#8217;s PAL format. He&#8217;d already done the same for the US and Japanese SNES libraries. A package containing 100 of these PAL cartridges made it overseas, but went missing after being transferred to the United States Postal Service (USPS).</p><p>I&#8217;ve been in contact with Byuu since the last article went up, and he let me know more about what&#8217;s happened since Tuesday. Byuu received a letter from the USPS and a torn piece of the original shipment, photos of which are below. The letter refers to damage by &#8220;normal machine processing.&#8221; But there&#8217;s hardly anything left of the package, and understandably, Byuu was outraged. He <a href="https://www.reddit.com/r/emulation/comments/5uckkd/100_snes_pal_game_shipment_update_package_was/" target="_blank" rel="nofollow noopener noreferrer">took to Reddit</a> to vent his frustration.</p><blockquote><p>&#8220;They shipped me the mother fucking box label and nothing else, claiming the machine ate it. BULLSHIT. If the label came off, it&#8217;d belong to the box right next to it without a label.</p><p>The USPS employees in Jersey City just stole a $10,000 package of games. This is felony theft.&#8221;</p></blockquote><p><img src="../../v1cdn.destructoid.com/torn%2520package-noscale.jpg" border="0"><br /><sub>The torn scrap with with the addresses, along with the apology letter from the USPS.</sub></p><div></div><p>I reached out to Byuu and tried to ask him some questions about what had happened. He had taken some time to cool down after the initial post, and had this to say:</p><blockquote><p>&#8220;Basically, the letter claims that the USPS&#8217; machine ate my package and tore off the label, which they sent back in an envelope without the package or the games. Seeing this, last night I rather angrily posted about this and presumed it to be blatant theft. While I do still have a very bad feeling, the truth is I can&#8217;t know for certainty what actually happened. But the circumstances are intensely suspicious. The top and bottom of the label is cut cleanly, which doesn&#8217;t seem likely for a package being ripped open by a machine.&#8221;</p></blockquote><p>Even though it looks bad, there is a ray of hope. Byuu says that the media attention the story received led someone at the USPS consumer affairs department to get in contact with him.</p><blockquote><p>&#8220;He has opened an investigation case for me, and I&#8217;ve provided him with all of the information that I have. So now I am waiting for the results of the investigation. I do not know how long it will take. They have many possible places the package could have gone that will need to be searched. My pessimism is rather significant, so my hopes are not high. But, there is at least a possibility that they can locate the package. So, fingers crossed.&#8221;</p></blockquote><p><img src="../../v1cdn.destructoid.com/oopsydoodles-noscale.jpg" border="0"><br /><sub>The apology letter sent by the USPS.</sub></p><p>I looked into some of the common suggestions that were made in the comments in the last article, and Byuu has addressed almost all of them. Several people suggested that he could have shipped ROM creation equipment to the collector instead of borrowing the games. Byuu says that his ROM dumping setup is custom, unique, and wouldn&#8217;t travel well. Additionally, he anticipated spending over 600 hours to dump the ROMs, time the collector he was borrowing from doesn&#8217;t have. This is also the reason he couldn&#8217;t go to Germany to dump the ROMs in person. It&#8217;s far more cost-effective to send a box than a person, and a box doesn&#8217;t need to stay in a hotel while the work is being done.</p><p>While Byuu is hopeful that the package will be returned, he&#8217;s taking steps to make sure that the collector he borrowed the games from is reimbursed for the loss. The parcel wasn&#8217;t insured for the full value of the games, so <a target="_blank" href="https://www.patreon.com/byuu" rel="nofollow noopener noreferrer">Byuu has set up a Patreon</a> to raise funds to buy replacement cartridges if necessary. Byuu wrote on Reddit that &#8220;<span>If the package ultimately arrives, I will be refunding all donations.&#8221;</span></p></p><div class="author-box"><div class="d-xl-flex align-items-center"><div class="author-image"> <img alt='' src="../wp-content/uploads/2021/01/destructoid-logo-small.png" srcset='https://www.destructoid.com/wp-content/uploads/2021/01/destructoid-logo-small.png 2x' class='avatar avatar-96 photo' height='96' width='96' loading='lazy' /></div><div class="ml-xl-4"><div class="author-name"> <span>Kevin McClusky</span></div><div class="author-bio"> <span>I'm a longtime member of Destructoid, and you may have known me in a prior life as Qalamari.
+In other words, hi. I've been here a long time. There's a good chance I'm older than you. I write freelance articles for other publications, so you might see my name elsewhere occasionally.
+Disclosure: I wrote a paid testimonial for the Speedify VPN service in April 2017.</span></div></div></div></div></div><div class="post-tags"><p> <span>Filed under...</span> <a href="https://www.destructoid.com/tag/emulators/"><span class="mr-2 ml-2">#Emulators</span></a><a href="https://www.destructoid.com/tag/history/"><span class="mr-2 ml-2">#History</span></a></p></div></article><nav class="navigation post-navigation" role="navigation" aria-label="Posts"><h2 class="screen-reader-text">Post navigation</h2><div class="nav-links"><div class="nav-previous"><a href="https://www.destructoid.com/weekend-deals-the-cheapest-ps4s-and-xbox-ones-for-2017/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">Weekend Deals: The cheapest PS4s and Xbox Ones for 2017</span></a></div><div class="nav-next"><a href="https://www.destructoid.com/atlas-and-p-body-from-portal-2-get-the-figma-treatment/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">Atlas and P-body from Portal 2 get the Figma treatment</span></a></div></div></nav><div id="comments" class="comments-area"><div id="disqus_thread"></div> <script>/**
+		 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT
+		 *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR
+		 *  PLATFORM OR CMS.
+		 *
+		 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:
+		 *  https://disqus.com/admin/universalcode/#configuration-variables
+		 */
+
+							var disqus_config = function () {
+						// Replace PAGE_URL with your page's canonical URL variable
+						this.page.url = 'https://www.destructoid.com/stories/it-s-not-looking-good-for-the-missing-10-000-snes-package-419521.phtml';
+
+						// Replace PAGE_IDENTIFIER with your page's unique identifier variable
+						this.page.identifier = 'Destructoid_419521';
+					};
+				
+		(function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+			var d = document, s = d.createElement('script');
+
+			// IMPORTANT: Replace EXAMPLE with your forum shortname!
+			s.src = 'https://Destructoid.disqus.com/embed.js';
+
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();</script> <noscript> Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow"> comments powered by Disqus. </a> </noscript></div></div><div class="col-lg-4"><aside id="secondary" class="widget-area custom-sidebar"><div class="eg-ad"><div class="abc-123-def sidebar"><div id="div-gpt-ad-1491417377896-1"></div></div></div><div class="latest-features-sidebar"><p class="sidebar-title">Latest Features</p><div class="featured-sidebar-item"><div class="d-flex justify-content-between align-items-center"><div class="left-side"><div class="title-wrapper"> <a href="https://www.destructoid.com/reviews/review-legend-of-mana/"><p class="featured-title">Review: Legend of Mana</p> </a><p class="featured-author"> <span>By <a href="https://www.destructoid.com/author/chris-carter/"> Chris Carter</a> </span></p></div></div><div class="right-side"> <a href="https://www.destructoid.com/reviews/review-legend-of-mana/"> <img src="../wp-content/uploads/2021/06/Legend-of-Mana-Review.jpg" alt="Review: Legend of Mana"> </a></div></div></div><div class="featured-sidebar-item"><div class="d-flex justify-content-between align-items-center"><div class="left-side"><div class="title-wrapper"> <a href="https://www.destructoid.com/sea-of-thieves-a-pirates-life-solo-player-impressions/"><p class="featured-title">Sea of Thieves: A Pirate&#8217;s Life is worth diving into as a solo player</p> </a><p class="featured-author"> <span>By <a href="https://www.destructoid.com/author/jordan-devore/"> Jordan Devore</a> </span></p></div></div><div class="right-side"> <a href="https://www.destructoid.com/sea-of-thieves-a-pirates-life-solo-player-impressions/"> <img src="../wp-content/uploads/2021/06/Sea-of-Thieves-A-Pirates-Life-ghost-ships.jpg" alt="Sea of Thieves: A Pirate&#8217;s Life is worth diving into as a solo player"> </a></div></div></div><div class="featured-sidebar-item"><div class="d-flex justify-content-between align-items-center"><div class="left-side"><div class="title-wrapper"> <a href="https://www.destructoid.com/reviews/destructoid-umurangi-generation-review/"><p class="featured-title">Review: Umurangi Generation Special Edition</p> </a><p class="featured-author"> <span>By <a href="https://www.destructoid.com/author/jonathan-holmes/"> Jonathan Holmes</a> </span></p></div></div><div class="right-side"> <a href="https://www.destructoid.com/reviews/destructoid-umurangi-generation-review/"> <img src="../wp-content/uploads/2021/06/UmurangiGenerationbanner.jpg" alt="Review: Umurangi Generation Special Edition"> </a></div></div></div><div class="featured-sidebar-item"><div class="d-flex justify-content-between align-items-center"><div class="left-side"><div class="title-wrapper"> <a href="https://www.destructoid.com/sonic-the-hedgehog-30th-anniversary-sega/"><p class="featured-title">Sonic the Hedgehog at 30: What are your favorite memories of The Blue Blur?</p> </a><p class="featured-author"> <span>By <a href="https://www.destructoid.com/author/chris-moyse/"> Chris Moyse</a> </span></p></div></div><div class="right-side"> <a href="https://www.destructoid.com/sonic-the-hedgehog-30th-anniversary-sega/"> <img src="../wp-content/uploads/2021/06/sonic-30-anniversary.jpg" alt="Sonic the Hedgehog at 30: What are your favorite memories of The Blue Blur?"> </a></div></div></div><div class="featured-sidebar-item"><div class="d-flex justify-content-between align-items-center"><div class="left-side"><div class="title-wrapper"> <a href="https://www.destructoid.com/infinity-game-table-review/"><p class="featured-title">Arcade1Up&#8217;s Infinity Game Table has a lot of promise, especially for families</p> </a><p class="featured-author"> <span>By <a href="https://www.destructoid.com/author/chris-carter/"> Chris Carter</a> </span></p></div></div><div class="right-side"> <a href="https://www.destructoid.com/infinity-game-table-review/"> <img src="../wp-content/uploads/2021/06/Infinity-Game-Table-Review.png" alt="Arcade1Up&#8217;s Infinity Game Table has a lot of promise, especially for families"> </a></div></div></div></div><section id="custom_html-2" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="eg-ad"><div class="abc-123-def sidebar"><div id="div-gpt-ad-1491417377896-2"></div></div></div></div></section><div class="top-sidebar-wrapper"><div class="top-social-email"><p class="text-center">Got news? <a href="/cdn-cgi/l/email-protection#11657861625175746265636472657e78753f727e7c"><span class="__cf_email__" data-cfemail="f185988182b195948285838492859e9895df929e9c">[email&#160;protected]</span></a></p></div><div class="d-flex justify-content-between top-sidebar-socials"><div> <a href="https://twitter.com/destructoid" target="_blank"><i class="fab fa-twitter"></i></a></div><div> <a href="https://facebook.com/destructoid" target="_blank"><i class="fab fa-facebook-f"></i></a></div><div> <a href="https://youtube.com/dtoid" target="_blank"><i class="fab fa-youtube"></i></a></div><div> <a href="https://twitch.tv/destructoid" target="_blank"><i class="fab fa-twitch"></i></a></div><div> <a href="https://www.destructoid.com/contact-us.phtml" target="_blank"><i class="fas fa-envelope"></i></a></div><div> <a href="https://discord.gg/BhGq7xW" target="_blank"><i class="fab fa-discord"></i></a></div></div></div><section id="text-2" class="widget widget_text"><div class="textwidget"></div></section><div class="latest-reviews-sidebar-wrapper"><div class="reviews-sidebar-title"><p>Latest Reviews</p></div><div class="review-item d-flex justify-content-between align-items-center"><div class="title-wrapper"> <a href="https://www.destructoid.com/reviews/review-olympic-games-tokyo-2020-the-official-video-game/"><p class="review-title">Review: Olympic Games Tokyo 2020 &#8211; The Official Video Game</p> </a><p class="review-author"> <span>By <a href="https://www.destructoid.com/author/dan-roemer/">Dan Roemer</a></span></p></div><div class="review-score"><div class="hexagon-small yellow"><h3>5</h3></div></div> <a href="https://www.destructoid.com/reviews/review-olympic-games-tokyo-2020-the-official-video-game/" class="overlay-link"></a></div><div class="review-item d-flex justify-content-between align-items-center"><div class="title-wrapper"> <a href="https://www.destructoid.com/reviews/destructoid-umurangi-generation-review/"><p class="review-title">Review: Umurangi Generation Special Edition</p> </a><p class="review-author"> <span>By <a href="https://www.destructoid.com/author/jonathan-holmes/">Jonathan Holmes</a></span></p></div><div class="review-score"><div class="hexagon-small green"><h3>9.5</h3></div></div> <a href="https://www.destructoid.com/reviews/destructoid-umurangi-generation-review/" class="overlay-link"></a></div><div class="review-item d-flex justify-content-between align-items-center"><div class="title-wrapper"> <a href="https://www.destructoid.com/reviews/review-scarlet-nexus/"><p class="review-title">Review: Scarlet Nexus</p> </a><p class="review-author"> <span>By <a href="https://www.destructoid.com/author/ericvanallen/">Eric Van Allen</a></span></p></div><div class="review-score"><div class="hexagon-small green"><h3>8</h3></div></div> <a href="https://www.destructoid.com/reviews/review-scarlet-nexus/" class="overlay-link"></a></div><div class="review-item d-flex justify-content-between align-items-center"><div class="title-wrapper"> <a href="https://www.destructoid.com/reviews/review-legend-of-mana/"><p class="review-title">Review: Legend of Mana</p> </a><p class="review-author"> <span>By <a href="https://www.destructoid.com/author/chris-carter/">Chris Carter</a></span></p></div><div class="review-score"><div class="hexagon-small green"><h3>8</h3></div></div> <a href="https://www.destructoid.com/reviews/review-legend-of-mana/" class="overlay-link"></a></div><div class="review-item d-flex justify-content-between align-items-center"><div class="title-wrapper"> <a href="https://www.destructoid.com/reviews/alex-kidd-in-miracle-world-dx-review/"><p class="review-title">Review: Alex Kidd in Miracle World DX</p> </a><p class="review-author"> <span>By <a href="https://www.destructoid.com/author/chris-moyse/">Chris Moyse</a></span></p></div><div class="review-score"><div class="hexagon-small green"><h3>7</h3></div></div> <a href="https://www.destructoid.com/reviews/alex-kidd-in-miracle-world-dx-review/" class="overlay-link"></a></div><div class="review-item d-flex justify-content-between align-items-center"><div class="title-wrapper"> <a href="https://www.destructoid.com/reviews/review-game-builder-garage/"><p class="review-title">Review: Game Builder Garage</p> </a><p class="review-author"> <span>By <a href="https://www.destructoid.com/author/cj-andriessen/">CJ Andriessen</a></span></p></div><div class="review-score"><div class="hexagon-small yellow"><h3>6.5</h3></div></div> <a href="https://www.destructoid.com/reviews/review-game-builder-garage/" class="overlay-link"></a></div><div class="review-item d-flex justify-content-between align-items-center"><div class="title-wrapper"> <a href="https://www.destructoid.com/reviews/mass-effect-legendary-edition-review/"><p class="review-title">Review: Mass Effect Legendary Edition</p> </a><p class="review-author"> <span>By <a href="https://www.destructoid.com/author/ericvanallen/">Eric Van Allen</a></span></p></div><div class="review-score"><div class="hexagon-small green"><h3>9</h3></div></div> <a href="https://www.destructoid.com/reviews/mass-effect-legendary-edition-review/" class="overlay-link"></a></div><div class="review-item d-flex justify-content-between align-items-center"><div class="title-wrapper"> <a href="https://www.destructoid.com/reviews/review-cruelty-squad/"><p class="review-title">Review: Cruelty Squad</p> </a><p class="review-author"> <span>By <a href="https://www.destructoid.com/author/adzuken/">Zoey Handley</a></span></p></div><div class="review-score"><div class="hexagon-small green"><h3>7.5</h3></div></div> <a href="https://www.destructoid.com/reviews/review-cruelty-squad/" class="overlay-link"></a></div><div class="review-item d-flex justify-content-between align-items-center"><div class="title-wrapper"> <a href="https://www.destructoid.com/reviews/review-guilty-gear-strive/"><p class="review-title">Review: Guilty Gear Strive</p> </a><p class="review-author"> <span>By <a href="https://www.destructoid.com/author/ericvanallen/">Eric Van Allen</a></span></p></div><div class="review-score"><div class="hexagon-small green"><h3>8.5</h3></div></div> <a href="https://www.destructoid.com/reviews/review-guilty-gear-strive/" class="overlay-link"></a></div><div class="review-item d-flex justify-content-between align-items-center"><div class="title-wrapper"> <a href="https://www.destructoid.com/reviews/review-phantasy-star-online-2-new-genesis/"><p class="review-title">Review: Phantasy Star Online 2 New Genesis</p> </a><p class="review-author"> <span>By <a href="https://www.destructoid.com/author/chris-carter/">Chris Carter</a></span></p></div><div class="review-score"><div class="hexagon-small green"><h3>7.5</h3></div></div> <a href="https://www.destructoid.com/reviews/review-phantasy-star-online-2-new-genesis/" class="overlay-link"></a></div></div><section id="text-3" class="widget widget_text"><div class="textwidget"></div></section><section id="custom_html-3" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="eg-ad"><div class="abc-123-def sidebar"><div id="div-gpt-ad-1491417377896-3"></div></div></div></div></section></aside></div></div></main></div> <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>$( ".article-comments-count" ).click(function(event) {
+		event.preventDefault();
+		document.querySelector('#comments').scrollIntoView({
+			behavior: 'smooth'
+		});
+	});
+	// Enable Tooltips
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	})
+
+	// Override for resizing iframes if they are a youtube iframe
+	var i, frames;
+	frames = document.getElementsByTagName("iframe");
+	for (i = 0; i < frames.length; ++i)
+	{
+		if(frames[i].src.includes('youtube')){
+			frames[i].style.maxHeight = '400px';
+		}
+	}</script> <script id="dsq-count-scr" src="../../destructoid.disqus.com/count.js" async></script> <footer id="colophon" class="site-footer"><div class="container"><div class="d-flex flex-wrap align-items-center justify-content-center footer-links"> <a href="https://www.destructoid.com/contact-us/">Contact/Support</a> <a href="https://www.destructoid.com/ethics/">Ethics</a> <a href="https://www.destructoid.com/privacy/">Privacy</a> <a href="https://www.destructoid.com/terms/">Terms</a> <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">Content License</a></div></div></footer></div> <script type="text/javascript">jQuery(document).ready(function($){
+		var mobyMenu = new Moby({
+			menu       : jQuery('.menu-main-menu-container'), // The menu that will be cloned
+			mobyTrigger: jQuery('.mobile-button'), // Button that will trigger the Moby menu to open
+            menuClass    :  'left-side', // This is the class that is added to Moby (Mobile menu)
+			template : '<div class="moby-wrap"><div class="moby-close"><span class="moby-close-icon"></span> Close Menu</div>'+
+			'<div class="moby-middle"><a href="https://www.destructoid.com"><img class="mobile-logo img-fluid" src="https://www.destructoid.com/wp-content/themes/destructoid/inc/images/cropped-destructoid-logo-new.png" alt="Destructoid"></a></div><div class="moby-menu"></div></div>',
+		});
+    });</script> <script>if (typeof jQuery !== 'undefined') {
+                (function ($) {
+                    $('.pp-tab-widget').on('click', 'li a', function (e) {
+                        e.preventDefault();
+                        var $tab = $(this),
+                            href = $tab.attr('href');
+
+                        $('.pp-active').removeClass('pp-active');
+                        $tab.addClass('pp-active');
+
+                        $('.pp-show')
+                            .removeClass('pp-show')
+                            .addClass('pp-hide')
+                            .hide();
+
+                        $(href)
+                            .removeClass('pp-hide')
+                            .addClass('pp-show')
+                            .hide()
+                            .fadeIn(550);
+                    });
+                })(jQuery);
+            }</script> <script type="text/javascript">/* MonsterInsights Scroll Tracking */
+			if ( typeof(jQuery) !== 'undefined' ) {
+				jQuery( document ).ready(function(){
+					function monsterinsights_scroll_tracking_load() {
+						if ( ( typeof(__gaTracker) !== 'undefined' && __gaTracker && __gaTracker.hasOwnProperty( "loaded" ) && __gaTracker.loaded == true ) || ( typeof(__gtagTracker) !== 'undefined' && __gtagTracker ) ) {
+							(function(factory) {
+								factory(jQuery);
+							}(function($) {
+
+								/* Scroll Depth */
+								"use strict";
+								var defaults = {
+									percentage: true
+								};
+
+								var $window = $(window),
+									cache = [],
+									scrollEventBound = false,
+									lastPixelDepth = 0;
+
+								/*
+								 * Plugin
+								 */
+
+								$.scrollDepth = function(options) {
+
+									var startTime = +new Date();
+
+									options = $.extend({}, defaults, options);
+
+									/*
+									 * Functions
+									 */
+
+									function sendEvent(action, label, scrollDistance, timing) {
+                                                                                    var type        = 'event';
+                                            var eventName   = action;
+                                            var fieldsArray = {
+                                                event_category : 'Scroll Depth',
+                                                event_label    : label,
+                                                value          : 1,
+                                                non_interaction: true
+                                            };
+
+                                            if ( 'undefined' === typeof MonsterInsightsObject || 'undefined' === typeof MonsterInsightsObject.sendEvent ) {
+                                                return;
+                                            }
+
+                                            MonsterInsightsObject.sendEvent( type, eventName, fieldsArray );
+                                            if (arguments.length > 3) {
+                                                var type        = 'event';
+                                                var eventName   = 'timing_complete';
+                                                fieldsArray = {
+                                                    event_category : 'Scroll Depth',
+                                                    name           : action,
+                                                    event_label    : label,
+                                                    value          : timing,
+                                                    non_interaction: 1
+                                                };
+                                                MonsterInsightsObject.sendEvent( type, eventName, fieldsArray );
+                                            }
+                                        									}
+
+									function calculateMarks(docHeight) {
+										return {
+											'25%' : parseInt(docHeight * 0.25, 10),
+											'50%' : parseInt(docHeight * 0.50, 10),
+											'75%' : parseInt(docHeight * 0.75, 10),
+											/* Cushion to trigger 100% event in iOS */
+											'100%': docHeight - 5
+										};
+									}
+
+									function checkMarks(marks, scrollDistance, timing) {
+										/* Check each active mark */
+										$.each(marks, function(key, val) {
+											if ( $.inArray(key, cache) === -1 && scrollDistance >= val ) {
+												sendEvent('Percentage', key, scrollDistance, timing);
+												cache.push(key);
+											}
+										});
+									}
+
+									function rounded(scrollDistance) {
+										/* Returns String */
+										return (Math.floor(scrollDistance/250) * 250).toString();
+									}
+
+									function init() {
+										bindScrollDepth();
+									}
+
+									/*
+									 * Public Methods
+									 */
+
+									/* Reset Scroll Depth with the originally initialized options */
+									$.scrollDepth.reset = function() {
+										cache = [];
+										lastPixelDepth = 0;
+										$window.off('scroll.scrollDepth');
+										bindScrollDepth();
+									};
+
+									/* Add DOM elements to be tracked */
+									$.scrollDepth.addElements = function(elems) {
+
+										if (typeof elems == "undefined" || !$.isArray(elems)) {
+											return;
+										}
+
+										$.merge(options.elements, elems);
+
+										/* If scroll event has been unbound from window, rebind */
+										if (!scrollEventBound) {
+											bindScrollDepth();
+										}
+
+									};
+
+									/* Remove DOM elements currently tracked */
+									$.scrollDepth.removeElements = function(elems) {
+
+										if (typeof elems == "undefined" || !$.isArray(elems)) {
+											return;
+										}
+
+										$.each(elems, function(index, elem) {
+
+											var inElementsArray = $.inArray(elem, options.elements);
+											var inCacheArray = $.inArray(elem, cache);
+
+											if (inElementsArray != -1) {
+												options.elements.splice(inElementsArray, 1);
+											}
+
+											if (inCacheArray != -1) {
+												cache.splice(inCacheArray, 1);
+											}
+
+										});
+
+									};
+
+									/*
+									 * Throttle function borrowed from:
+									 * Underscore.js 1.5.2
+									 * https://underscorejs.org
+									 * (c) 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+									 * Underscore may be freely distributed under the MIT license.
+									 */
+
+									function throttle(func, wait) {
+										var context, args, result;
+										var timeout = null;
+										var previous = 0;
+										var later = function() {
+											previous = new Date;
+											timeout = null;
+											result = func.apply(context, args);
+										};
+										return function() {
+											var now = new Date;
+											if (!previous) previous = now;
+											var remaining = wait - (now - previous);
+											context = this;
+											args = arguments;
+											if (remaining <= 0) {
+												clearTimeout(timeout);
+												timeout = null;
+												previous = now;
+												result = func.apply(context, args);
+											} else if (!timeout) {
+												timeout = setTimeout(later, remaining);
+											}
+											return result;
+										};
+									}
+
+									/*
+									 * Scroll Event
+									 */
+
+									function bindScrollDepth() {
+
+										scrollEventBound = true;
+
+										$window.on('scroll.scrollDepth', throttle(function() {
+											/*
+											 * We calculate document and window height on each scroll event to
+											 * account for dynamic DOM changes.
+											 */
+
+											var docHeight = $(document).height(),
+												winHeight = window.innerHeight ? window.innerHeight : $window.height(),
+												scrollDistance = $window.scrollTop() + winHeight,
+
+												/* Recalculate percentage marks */
+												marks = calculateMarks(docHeight),
+
+												/* Timing */
+												timing = +new Date - startTime;
+
+											checkMarks(marks, scrollDistance, timing);
+										}, 500));
+
+									}
+
+									init();
+								};
+
+								/* UMD export */
+								return $.scrollDepth;
+
+							}));
+
+							jQuery.scrollDepth();
+						} else {
+							setTimeout(monsterinsights_scroll_tracking_load, 200);
+						}
+					}
+					monsterinsights_scroll_tracking_load();
+				});
+			}
+		/* End MonsterInsights Scroll Tracking */</script><script src="../wp-includes/js/dist/vendor/wp-polyfill.min.js" id='wp-polyfill-js'></script> <script id='wp-polyfill-js-after'>( 'fetch' in window ) || document.write( '<script src="https://www.destructoid.com/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://www.destructoid.com/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="https://www.destructoid.com/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="https://www.destructoid.com/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://www.destructoid.com/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://www.destructoid.com/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );( 'objectFit' in document.documentElement.style ) || document.write( '<script src="https://www.destructoid.com/wp-includes/js/dist/vendor/wp-polyfill-object-fit.min.js?ver=2.3.4"></scr' + 'ipt>' );</script> <script src="../wp-includes/js/dist/hooks.min.js" id='wp-hooks-js'></script> <script src="../wp-includes/js/dist/i18n.min.js" id='wp-i18n-js'></script> <script id='wp-i18n-js-after'>wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );</script> <script id='password-strength-meter-js-extra'>var pwsL10n = {"unknown":"Password strength unknown","short":"Very weak","bad":"Weak","good":"Medium","strong":"Strong","mismatch":"Mismatch"};</script> <script id='password-strength-meter-js-translations'>( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2021-03-07 04:06:50+0000","generator":"GlotPress\/3.0.0-alpha.2","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"en_CA"},"%1$s is deprecated since version %2$s! Use %3$s instead. Please consider writing more inclusive code.":["%1$s is deprecated since version %2$s! Use %3$s instead. Please consider writing more inclusive code."]}},"comment":{"reference":"wp-admin\/js\/password-strength-meter.js"}} );</script> <script id='ppress-frontend-script-js-extra'>var pp_ajax_form = {"ajaxurl":"https:\/\/www.destructoid.com\/wp-admin\/admin-ajax.php","confirm_delete":"Are you sure?","deleting_text":"Deleting...","deleting_error":"An error occurred. Please try again.","nonce":"c2bb94146d","disable_ajax_form":"false"};</script> <script defer src="../wp-content/uploads/autoptimize/js/autoptimize_132358515ce145f85d902bf8c092b2cd.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-25dbf0ab1e84acf5884","applicationID":"518919792","transactionName":"Zl0AbEYEWEJXVEJfWF8XI1tADFlfGURfWFBdXQ==","queueTime":0,"applicationTime":227,"atts":"ShoDGg4eS0w=","errorBeacon":"bam.nr-data.net","agent":""}</script><script defer src="../../static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"66608ed90c2163cb","token":"8c991ed2b99945d0b1d013267a253a19","version":"2021.5.2","si":10}'></script>
+</body></html>

@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<title>Accuracy takes power: one man’s 3GHz quest to build a perfect SNES emulator | Ars Technica</title>
+    <script type="text/javascript">
+    ars = {"ASSETS":"https:\/\/cdn.arstechnica.net\/wp-content\/themes\/ars\/assets","HOME_URL":"https:\/\/arstechnica.com","LOGIN_URL":"https:\/\/arstechnica.com\/services\/login-desktop.html?v=1","CIVIS":"\/civis","THEME":"light","VIEW":"grid","MOBILE":false,"SUBSCRIBER":false,"PLUS_PLUS":false,"LOGGED":false,"USER_ID":null,"ENV":"production","AD":{"tags":["emulation"],"channel":"gaming","slug":"accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator","template_type":"article","queue":[],"server":"production"},"TOTAL":100630,"UNREAD":0,"RECENT":[1776504,1776577,1776421,1775718,1776495,1776542,1776441,1776088,1776429,1776394,1776333,1776215,1776256,1776079,1775882,1776140,1776180,1776089,1776055,1776057,1775951,1775968,1770375,1775943,1775917],"LOGINS":true,"CROSS":false,"PARSELY":"arstechnica.com","COMMENTS":false,"HOMEPAGE":false,"SITE":1,"READY":[],"SHOW_ADS":true,"IMG_PROXY":"https:\/\/cdn.arstechnica.net\/i\/","CATEGORY":"gaming","PAGETITLE":"","ZEN_MODE":false};
+  </script>
+
+  <link rel="stylesheet" type="text/css" media="all" href="../../../../../cdn.arstechnica.net/wp-content/themes/ars/assets/css/main-dca8fb7448.css" />
+      <link rel="alternate" type="application/rss+xml" href="http://feeds.arstechnica.com/arstechnica/index/" />
+  <link rel="shortcut icon" href="../../../../../cdn.arstechnica.net/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="../../../../../cdn.arstechnica.net/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../../../cdn.arstechnica.net/wp-content/themes/ars/assets/img/ars-ios-icon-d9a45f558c.png" />
+  <link rel="mask-icon" href="../../../../../cdn.arstechnica.net/wp-content/themes/ars/assets/img/ars-macos-safari-8997f76b21.svg" color="#ff4e00">
+  <link rel="icon" sizes="192x192" href="../../../../../cdn.arstechnica.net/wp-content/themes/ars/assets/img/material-ars-db41652381.png" />
+
+    <meta name="application-name" content="Ars Technica"/>
+  <meta name="msapplication-starturl" content="http://arstechnica.com/"/>
+  <meta name="msapplication-tooltip" content="Ars Technica: Serving the technologist for 1.2 decades"/>
+  <meta name="msapplication-task" content="name=News;action-uri=http://arstechnica.com/;icon-uri=https://cdn.arstechnica.net/favicon.ico"/>
+  <meta name="msapplication-task" content="name=Features;action-uri=http://arstechnica.com/features/;icon-uri=https://cdn.arstechnica.net/ie-jump-menu/jump-features.ico"/>
+  <meta name="msapplication-task" content="name=OpenForum;action-uri=http://arstechnica.com/civis/;icon-uri=https://cdn.arstechnica.net/ie-jump-menu/jump-forum.ico"/>
+  <meta name="msapplication-task" content="name=Subscribe;action-uri=http://arstechnica.com/subscriptions/;icon-uri=https://cdn.arstechnica.net/ie-jump-menu/jump-subscribe.ico"/>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="advertising" content="ask" />
+  <meta property="fb:admins" content="592156917" />
+  <meta property="fb:admins" content="108943" />
+    <meta property="fb:pages" content="19374573752" />
+  
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="theme-color" content="#000000" />
+
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- cache hit 305:single/meta:17f35fdd1fdb65c876389b3cdb1c5c04 -->
+<meta name='parsely-page' content='{"title":"Accuracy takes power: one man\u2019s 3GHz quest to build a perfect SNES emulator","link":"https:\/\/arstechnica.com\/gaming\/2011\/08\/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator\/","type":"post","author":"Ben Kuchera","post_id":44524,"pub_date":"2011-08-09T15:00:37Z","section":"Gaming &amp; Culture","tags":["emulation","type: feature"],"image_url":"https:\/\/cdn.arstechnica.net\/wp-content\/uploads\/2011\/08\/snes-emu-acc-intro.jpg"}'>
+<meta name='parsely-metadata' content='{"type":"feature","title":"Accuracy takes power: one man\u2019s 3GHz quest to build a perfect SNES emulator","post_id":44524,"lower_deck":"How can it take 3GHz to emulate a Super Nintendo? The man behind a major SNES  &hellip;","image_url":"https:\/\/cdn.arstechnica.net\/wp-content\/uploads\/2011\/08\/snes-emu-acc-intro.jpg","listing_image_url":"https:\/\/cdn.arstechnica.net\/wp-content\/uploads\/2011\/08\/snes-emu-acc-intro.jpg"}'>
+
+<link rel="canonical" href="https://arstechnica.com/gaming/news/2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator.ars" />
+
+<link rel="amphtml" href="https://arstechnica.com/gaming/news/2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator.ars?amp=1">
+
+<link rel="shorturl" href="https://arstechnica.com/?p=44524" />
+
+<meta name="description" content="How can it take 3GHz to emulate a Super Nintendo? The man behind a major SNES  &hellip;" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://arstechnica.com/gaming/news/2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator.ars">
+<meta name="twitter:title" content="Accuracy takes power: one man’s 3GHz quest to build a perfect SNES emulator">
+<meta name="twitter:description" content="How can it take 3GHz to emulate a Super Nintendo? The man behind a major SNES  &hellip;">
+
+<meta name="twitter:site" content="@arstechnica">
+<meta name="twitter:domain" content="arstechnica.com">
+
+<meta property="og:site_name" content="Ars Technica" />
+
+<meta name="twitter:image:src" content="https://cdn.arstechnica.net/wp-content/uploads/2011/08/snes-emu-acc-intro.jpg">
+<meta name="twitter:image:width" content="640">
+<meta name="twitter:image:height" content="360">
+
+<meta name="twitter:creator" content="@benkuchera">
+
+<meta property="og:url" content="https://arstechnica.com/gaming/news/2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator.ars" />
+<meta property="og:title" content="Accuracy takes power: one man’s 3GHz quest to build a perfect SNES emulator" />
+<meta property="og:image" content="https://cdn.arstechnica.net/wp-content/uploads/2011/08/snes-emu-acc-intro.jpg" />
+<meta property="og:description" content="How can it take 3GHz to emulate a Super Nintendo? The man behind a major SNES  &hellip;" />
+<meta property="og:type" content="article" />
+  <!-- cache hit 305:single/header:17f35fdd1fdb65c876389b3cdb1c5c04 -->
+        
+  
+      <!-- Google Tag Manager DataLayer -->
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({"event":"data-layer-loaded","user":{"ars_userId":undefined,"amg_userId":undefined,"uID":undefined,"sID":undefined,"loginStatus":false,"subscriberStatus":"none","infinityId":undefined,"registrationSource":undefined,"mdw_cnd_id":undefined,"monthlyVisits":undefined,"accessPaywall":undefined,"view":"grid","theme":"light","show_comments":false},"content":{"pageTemplate":"single","pageType":"article|feature","contentCategory":"gaming","section":"gaming","subsection":undefined,"contributor":"Ben Kuchera","contentID":44524,"contentLength":4220,"display":"Accuracy takes power: one man\u2019s 3GHz quest to build a perfect SNES emulator","contentSource":"web","pageAssets":undefined,"uniqueContentCount":undefined,"monthlyContentCount":undefined,"publishDate":"2011-08-09T15:00:37+00:00","modifiedDate":"2020-03-23T20:08:26+00:00","keywords":"emulation","dataSource":undefined},"marketing":{"campaignName":undefined,"circCampaignId":undefined,"internalCampaignId":undefined,"brand":"Ars Technica","certified_mrc_data":undefined,"condeNastId":undefined},"page":{"pID":undefined,"syndicatorUrl":undefined,"pageURL":"https:\/\/arstechnica.com\/?p=44524","canonical":"https:\/\/arstechnica.com\/gaming\/2011\/08\/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator\/","canonicalPathName":"\/gaming\/2011\/08\/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator\/"},"search":{"facets":undefined,"searchTerms":undefined},"site":{"appVersion":"1.0.0"}});
+</script>
+<!-- End Google Tag Manager DataLayer -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NLXNPCQ');</script>
+<!-- End Google Tag Manager -->
+<script type="text/javascript">
+class ABTest {
+  constructor(post_id, init_method) {
+    this.post_id = post_id;
+    this.ajaxurl = '/services/ars-ajax-handler.php';
+    this.expireDays = 1/48; // 30 min
+    this.group = this.getGroup();
+    this.uid = this.getUid();
+    this.init_method = init_method;
+    this.setTitle();
+
+    if (this.init_method === 'click') {
+      this.click();
+    }
+    else {
+      this.impression();
+    }
+  }
+
+  setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+  }
+
+  getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+
+  // Retrieves a unique id for determining whether the event should be recorded
+  getUid() {
+    var uid = this.getCookie('ars_ab_' + this.post_id + '_uid');
+    if (!uid) {
+      uid = (Math.random() + 1).toString(36).substring(2,7);
+      this.setCookie('ars_ab_' + this.post_id + '_uid', uid, this.expireDays);
+    }
+    return uid;
+  };
+
+  // Places the user in either A or B for this post id
+  getGroup() {
+    var group = this.getCookie('ars_ab_' + this.post_id + '_group');
+    if (!group) {
+      group = String.fromCharCode(Math.floor(Math.random() * 2) + 65).toLowerCase();
+      this.setCookie('ars_ab_' + this.post_id + '_group', group, this.expireDays);
+    }
+    return group;
+  };
+
+  // Records a headline impression (from homepage or other listing)
+  impression() {
+    // Send fake ajax
+    var params = {
+      nonce:        '9fff91aced',
+      action:       'ars_ab_impression',
+      id:           this.post_id,
+      group:        this.group,
+      uid:          this.uid,
+      ts:           (new Date()).getTime()
+    };
+    var url = this.ajaxurl + '?' + this.encodeParams(params);
+    document.write('\x3Cscript type="text/javascript" src="' + url + '">\x3C/script>');
+  };
+
+  // Records a headline click from the actual post page
+  click() {
+    // Send fake ajax
+    var params = {
+      nonce:        '51b03931a5',
+      action:       'ars_ab_click',
+      id:           this.post_id,
+      group:        this.group,
+      uid:          this.uid,
+      ts:           (new Date()).getTime()
+    };
+    var url = this.ajaxurl + '?' + this.encodeParams(params);
+    document.write('\x3Cscript type="text/javascript" src="' + url + '">\x3C/script>');
+  };
+
+  // If user is in B group, dynamically set title
+  setTitle() {
+    if (this.group == 'b') {
+      var span = document.getElementById('ars_ab_' + this.post_id);
+      var title = span.parentNode;
+      title.innerHTML = span.getAttribute('data-title-b');
+    }
+  };
+
+  encodeParams(data) {
+    var ret = [];
+    for (var d in data)
+      ret.push(encodeURIComponent(d) + "=" + encodeURIComponent(data[d]));
+    return ret.join("&");
+  };
+
+};
+</script><!-- OneTrust Cookies Consent Notice start -->
+<script 
+    src="../../../../../cdn.cookielaw.org/scripttemplates/otSDKStub.js"  
+    type="text/javascript" charset="UTF-8" 
+    data-domain-script="b10882a1-8446-4e7d-bfb2-ce2c770ad910">
+</script>
+<script type="text/javascript">function OptanonWrapper(){};</script>
+<script 
+    src="../../../../../cdn.cookielaw.org/opt-out/otCCPAiab.js" 
+    type="text/javascript" 
+    charset="UTF-8" 
+    ccpa-opt-out-ids="C0002,C0003,C0004,C0005" 
+    ccpa-opt-out-geo="ca" 
+    ccpa-opt-out-lspa="true">
+</script> 
+<!-- OneTrust Cookies Consent Notice end -->
+<script src="../../../../../www.googletagservices.com/tag/js/gpt.js" id="gpt-script" async ></script>
+<script>window.googletag=window.googletag||{};window.googletag.cmd=window.googletag.cmd||[];window.cns=window.cns||{};window.cns.queue=[];window.cns.async=function(s,c){cns.queue.push({service:s,callback:c})};window.sparrowQueue=window.sparrowQueue||[];</script>
+<link rel="dns-prefetch" href="//aax.amazon-adsystem.com">
+<link rel="preconnect" href="//aax.amazon-adsystem.com" crossorigin>
+<link rel="preconnect" href="https://mb.moatads.com" crossorigin>
+<script src="../../../../../c.amazon-adsystem.com/aax2/apstag.js" async></script>
+<script src="../../../../../cdn.arstechnica.net/cns/prebid.min;v=1624816277.js"></script>
+<script src="../../../../../js-sec.indexww.com/ht/p/183973-93942139695505.js" async></script>
+<script src="../../../../../z.moatads.com/condenastprebidheader987326845656/moatheader.js" async></script>
+<script>
+  window.cns.pageContext = {"contentType":"article","templateType":"article","channel":"gaming","subChannel":"","slug":"accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator","server":"production","keywords":{"tags":["emulation"],"cm":[],"platform":["wordpress"],"copilotid":""}};
+</script>
+<script src="../../../../../cdn.arstechnica.net/cns/ars-technica.min;v=1624816277.js"></script>
+<script type="text/javascript" src="../../../../../cdn.arstechnica.net/wp-content/themes/ars/assets/js/ars-84a4ab0802.ads.us.js"></script>
+</head>
+<body class="post-template-default single single-post postid-44524 single-format-standard grid-view light blog-us">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="../../../../../www.googletagmanager.com/ns;id=GTM-NLXNPCQ.html" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  	<aside class="ad ad_crown" aria-label="Top of page advertisement"></aside>
+
+<div class="site-wrapper">
+  <a class="screen-reader-text skip-link" href="" aria-label="Skip to main content">Skip to main content</a>    
+  <header class="site-header">
+    <div class="header-left">
+      <a href="https://arstechnica.com" id="header-logo" title="Ars Technica Homepage">
+      <span class="icon icon-logo-ars-us"></span>
+  </a>
+    </div>
+
+    <div class="header-right">
+      <nav id="header-nav-primary">
+        <ul>
+          
+  <li><a class="nav-link section-information-technology " href="/information-technology/">Biz &amp; IT</a></li>
+  <li><a class="nav-link section-gadgets " href="/gadgets/">Tech</a></li>
+  <li><a class="nav-link section-science " href="/science/">Science</a></li>
+  <li><a class="nav-link section-tech-policy " href="/tech-policy/">Policy</a></li>
+  <li><a class="nav-link section-cars " href="/cars/">Cars</a></li>
+  <li><a class="nav-link section-gaming active" href="/gaming/">Gaming &amp; Culture</a></li>
+
+<li><a class="nav-link store" href="/store/">Store</a></li>
+<li><a class="nav-link forums" href="/civis/">Forums</a></li>
+        </ul>
+      </nav>
+
+              <a href="/store/product/subscriptions/" class="header-highlight-link">Subscribe</a>
+                  <div class="dropdown" id="header-search">
+        <a href="/search/" class="dropdown-toggle search-toggle" aria-label="Search" aria-expanded="false">
+          <span class="icon icon-search-mag-glass"></span>
+        </a>
+        <div class="dropdown-content">
+          <form action="/search/" method="GET" id="search_form">
+  <input type="hidden" name="ie" value="UTF-8">
+  <input type="text" name="q" id="hdr_search_input" value="" aria-label="Search..." placeholder="Search...">
+</form>
+<a class="nav-search-close">Close</a>
+        </div>
+      </div>
+      <div class="dropdown dropdown-mega" id="header-burger">
+        <a href="" class="dropdown-toggle" aria-label="Menu" aria-expanded="false">
+          <span></span>
+        </a>
+        <div id="site-menu" class="dropdown-content">
+          <section class="burger-navigate">
+  <h3>
+    <span class="icon icon-half-target"></span>
+    Navigate
+  </h3>
+  <ul>
+  <li><a class="nav-link store" href="/store/">Store</a></li>
+  <li><a class="nav-link subscribe" href="/store/product/subscriptions/">Subscribe</a></li>
+    <li><a class="nav-link videos" href="http://video.arstechnica.com/">Videos</a></li>
+    <li><a class="nav-link section-features" href="/features/">Features</a></li>
+    <li><a class="nav-link section-reviews" href="/reviews/">Reviews</a></li>
+  </ul>
+
+  <ul>
+    <li><a class="nav-link page-rss-feeds" href="/rss-feeds/">RSS Feeds</a></li>
+    <li><a class="nav-link mobile" href="/?view=mobile">Mobile Site</a></li>
+  </ul>
+
+  <ul>
+    <li><a class="nav-link page-about-us" href="/about-us/">About Ars</a></li>
+    <li><a class="nav-link page-staff-directory" href="/staff-directory/">Staff Directory</a></li>
+    <li><a class="nav-link page-contact-us" href="/contact-us/">Contact Us</a></li>
+  </ul>
+
+  <ul>
+    <li><a class="nav-link page-advertise-with-us" href="/advertise-with-us/">Advertise with Ars</a></li>
+    <li><a class="nav-link page-reprints" href="/reprints/">Reprints</a></li>
+  </ul>
+</section>
+
+<section class="burger-filter">
+  <h3>
+    <span class="icon icon-half-mag"></span>
+    Filter by topic
+  </h3>
+  <ul id="burger-nav-primary">
+    
+  <li><a class="nav-link section-information-technology " href="/information-technology/">Biz &amp; IT</a></li>
+  <li><a class="nav-link section-gadgets " href="/gadgets/">Tech</a></li>
+  <li><a class="nav-link section-science " href="/science/">Science</a></li>
+  <li><a class="nav-link section-tech-policy " href="/tech-policy/">Policy</a></li>
+  <li><a class="nav-link section-cars " href="/cars/">Cars</a></li>
+  <li><a class="nav-link section-gaming active" href="/gaming/">Gaming &amp; Culture</a></li>
+
+<li><a class="nav-link store" href="/store/">Store</a></li>
+<li><a class="nav-link forums" href="/civis/">Forums</a></li>
+  </ul>
+</section>
+
+<section class="burger-settings">
+  <h3>
+    <span class="icon icon-half-gear"></span>
+    Settings
+  </h3>
+  <div>
+    <div class="burger-layout">
+      
+<p>Front page layout</p>
+<div class="burger-layout-grid">
+  <a rel="nofollow" href="http://arstechnica.com/gaming/2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator/?view=grid" class="">
+    <span class="icon icon-grid"></span><br>
+    Grid
+    <div class="faux-radio active"></div>
+      </a>
+</div>
+
+<div class="burger-layout-list">
+  <a rel="nofollow" href="http://arstechnica.com/gaming/2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator/?view=archive" class="">
+    <span class="icon icon-list"></span><br>
+    List
+    <div class="faux-radio "></div>
+      </a>
+</div>
+
+    </div>
+    <div class="burger-theme">
+      
+<p>Site theme</p>
+<div class="burger-theme-light">
+  <a rel="nofollow" href="http://arstechnica.com/gaming/2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator/?theme=light" class="">
+    <span><span>Black on white</span></span>
+    <div class="faux-radio active"></div>
+      </a>
+</div>
+
+<div class="burger-theme-dark">
+  <a rel="nofollow" href="http://arstechnica.com/gaming/2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator/?theme=dark" class="">
+    <span><span>White on black</span></span>
+    <div class="faux-radio "></div>
+      </a>
+</div>
+    </div>
+  </div>
+</section>
+        </div>
+      </div>
+      <div class="dropdown dropdown-mega" id="header-account">
+      <a href="https://arstechnica.com/civis/ucp.php?mode=login&return_to=%2Fgaming%2F2011%2F08%2Faccuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator%2F" class="dropdown-toggle" aria-expanded="false">
+      Sign in
+      <span class="icon dropdown-indicator icon-drop-indicator"></span>
+    </a>
+    <div class="dropdown-content">
+    <section class="profile-activity">
+      <h3>
+        <span class="icon icon-half-bubble-up"></span>
+        Comment activity
+      </h3>
+              <p>Sign up or login to join the discussions!</p>
+          </section>
+
+    <section class="profile-settings">
+              <form id="login-form" action="https://arstechnica.com/civis/ucp.php?mode=login" method="post">
+  <input type="text" name="username" id="username" placeholder="Username or Email" aria-label="Username or Email" />
+  <input type="password" name="password" id="password"  placeholder="Password" aria-label="Password" />
+  <input type="submit" value="Submit" class="button button-orange button-wide" name="login" />
+  <label id="remember-label">
+    <input type="checkbox" name="autologin" id="autologin" />
+  Stay logged in</label> <span>|</span> <a href="/civis/ucp.php?mode=sendpassword">Having trouble?</a>
+
+  <input type="hidden" name="redirect" value="./ucp.php?mode=login&amp;autoredirect=1&amp;return_to=%2Fgaming%2F2011%2F08%2Faccuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator%2F" />
+  <input type="hidden" name="return_to" value="/gaming/2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator/" />
+  <input type="hidden" name="from_homepage" value="1" />
+</form>
+<div class="register-account">
+  <span>Sign up to comment and more</span>
+  <a href="https://arstechnica.com/civis/ucp.php?mode=register" class="signup-btn button button-wide">Sign up</a>
+</div>
+      
+    </section>
+  </div>
+</div>
+    </div>
+  </header>
+
+        
+  <main id="main" class="content-wrapper">
+
+<script type="text/javascript">
+  ars.ARTICLE = {"url":"https:\/\/arstechnica.com\/gaming\/news\/2011\/08\/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator.ars","short_url":"https:\/\/arstechnica.com\/?p=44524","title":"Accuracy takes power: one man\u2019s 3GHz quest to build a perfect SNES emulator","author":0,"id":44524,"topic":1152634,"pages":3,"current_page":1,"superscroll":false,"promoted":[],"single_page":false,"comments":237,"fullwidth":false,"slug":"accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator","arsStaff":{"104481":{"name":"Aaron Zimmerman","title":"Copyeditor","staff":true},"332715":{"name":"Andrew Cunningham","title":"Reviews Editor Emeritus","staff":false},"1002":{"name":"Aurich Lawson","title":"Creative Director","staff":true},"509873":{"name":"Beth Mole","title":"Health Reporter","staff":true},"453791":{"name":"Cathleen O'Grady","title":"Contributing science reporter","staff":true},"102179":{"name":"Chris Lee","title":"Associate writer","staff":true},"821742":{"name":"Corey Gaskin","title":"Senior Commerce Writer","staff":true},"329388":{"name":"Dan Goodin","title":"Security Editor","staff":true},"254631":{"name":"Diana Gitig","title":"Associate Writer","staff":false},"25862":{"name":"Eric Bangeman","title":"Managing Editor","staff":true},"512413":{"name":"Eric Berger","title":"Senior Space Editor","staff":true},"46707":{"name":"Iljitsch van Beijnum","title":"Associate Writer","staff":false},"316010":{"name":"Jason Marlin","title":"Technical Director","staff":true},"746799":{"name":"Jennifer Ouellette","title":"Senior Writer","staff":true},"15365":{"name":"Jeremy Reimer","title":"Senior Niche Technology Historian","staff":false},"4086":{"name":"Jim Salter","title":"Technology Reporter","staff":true},"52979":{"name":"John Timmer","title":"Senior Science Editor","staff":true},"312082":{"name":"Jon Brodkin","title":"Senior IT Reporter","staff":true},"14317":{"name":"Jonathan M. Gitlin","title":"Automotive Editor","staff":true},"998":{"name":"Ken Fisher","title":"Editor in Chief","staff":true},"440179":{"name":"Kerry Staurseth","title":"Associate Copyeditor","staff":true},"328283":{"name":"Kyle Orland","title":"Senior Gaming Editor","staff":true},"10243":{"name":"Lee Hutchinson","title":"Senior Technology Editor","staff":true},"173191":{"name":"Matthew Lasar","title":"Associate writer","staff":true},"182268":{"name":"Nate Anderson","title":"Deputy Editor","staff":true},"330533":{"name":"Nathan Mattise","title":"Features Editor","staff":true},"1991":{"name":"Ohrmazd","title":"","staff":false},"391727":{"name":"Ron Amadeo","title":"Reviews Editor","staff":true},"348927":{"name":"Sam Machkovech","title":"Tech Culture Editor","staff":true},"588289":{"name":"Samuel Axon","title":"Senior Reviews Editor","staff":true},"294205":{"name":"Scott K. Johnson","title":"Associate Writer","staff":true},"671621":{"name":"Steven Klein","title":"Developer","staff":false},"163185":{"name":"Tim De Chant","title":"","staff":false},"173910":{"name":"Timothy B. Lee","title":"Senior tech policy reporter","staff":true}},"tags":["emulation"],"zen_mode":false,"vote_sentiments":[{"sentiment_id":"1","sentiment":"agree","direction":"positive","icon":null,"label":"Agree"},{"sentiment_id":"3","sentiment":"interesting","direction":"positive","icon":null,"label":"Interesting"},{"sentiment_id":"5","sentiment":"funny","direction":"positive","icon":null,"label":"Funny"},{"sentiment_id":"6","sentiment":"addsto","direction":"positive","icon":null,"label":"Adds to Story"},{"sentiment_id":"7","sentiment":"disagree","direction":"negative","icon":null,"label":"Disagree"},{"sentiment_id":"8","sentiment":"inaccurate","direction":"negative","icon":null,"label":"Inaccurate"},{"sentiment_id":"11","sentiment":"pointless","direction":"negative","icon":null,"label":"Doesn't Contribute"},{"sentiment_id":"12","sentiment":"abusive","direction":"negative","icon":null,"label":"Abusive"}]};
+</script>
+
+<article itemscope itemtype="http://schema.org/NewsArticle" class="article-single standalone intro-standard " id="">
+      <div class="column-wrapper">
+    <div class="left-column">
+        <header class="article-header">
+            <h4 class="post-upperdek">
+      Gaming &amp; Culture    &mdash;
+</h4>
+            <h1 itemprop="headline">Accuracy takes power: one man’s 3GHz quest to build a perfect SNES emulator</h1>
+            <h2 itemprop="description">How can it take 3GHz to emulate a Super Nintendo? The man behind a major SNES  &hellip;</h2>
+            <section class="post-meta">
+
+  
+<p class="byline" itemprop="author creator" itemscope itemtype="http://schema.org/Person">
+      <a itemprop="url" href="https://arstechnica.com/author/ben-kuchera/" rel="author"><span itemprop="name">Byuu</span></a>
+    -  <time class="date" data-time="1312902037" datetime="2011-08-09T15:00:37+00:00">Aug 9, 2011 3:00 pm UTC</time>
+</p>
+
+
+  
+</section>        </header>
+        <section class="article-guts">
+            <div itemprop="articleBody" class="article-content post-page">
+                                    
+<figure class="intro-image intro-left"><img src="../../../../../cdn.arstechnica.net/wp-content/uploads/2011/08/snes-emu-acc-intro.jpg" alt="Accuracy takes power: one man’s 3GHz quest to build a perfect SNES emulator"></figure><aside id="social-left" class="social-left" aria-label="Read the comments or share this article"><a title="154 posters participating" class="comment-count icon-comment-bubble-down" href="https://arstechnica.com/gaming/2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator/?comments=1">
+      <h4 class="comment-count-before">reader comments</h4>
+    
+  <span class="comment-count-number">237</span>
+  <span class="visually-hidden"> with 154 posters participating</span>
+  </a>
+  
+
+<div class="share-links">
+  <h4>Share this story</h4>
+  <ul><li><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Farstechnica.com%2F%3Fpost_type%3Dpost%26p%3D44524" target="_blank" class="social-icon share-facebook" title="Share on Facebook"><span class="visually-hidden">Share on Facebook</span></a></li>
+    <li><a href="https://twitter.com/share?text=Accuracy+takes+power%3A+one+man%E2%80%99s+3GHz+quest+to+build+a+perfect+SNES+emulator&amp;url=https%3A%2F%2Farstechnica.com%2F%3Fpost_type%3Dpost%26p%3D44524" target="_blank" class="social-icon share-twitter" title="Share on Twitter"><span class="visually-hidden">Share on Twitter</span></a></li>
+    <li><a href="https://www.reddit.com/submit?url=https%3A%2F%2Farstechnica.com%2F%3Fpost_type%3Dpost%26p%3D44524&amp;title=Accuracy+takes+power%3A+one+man%E2%80%99s+3GHz+quest+to+build+a+perfect+SNES+emulator" target="_blank" class="social-icon share-reddit" title="Share on Reddit"><span class="visually-hidden">Share on Reddit</span></a></li>
+  </ul></div>
+      </aside><!-- cache hit 305:single/related:17f35fdd1fdb65c876389b3cdb1c5c04 --><!-- empty --><p><em>Emulators for playing older games are immensely popular online, with regular arguments breaking out over which emulator is best for which game. Today we present another point of view from a gentleman who has created the Super Nintendo emulator bsnes. He wants to share his thoughts on the most important part of the emulation experience: accuracy.</em></p>
+<p>It doesn't take much raw <em>power</em> to play Nintendo or SNES games on a modern PC; emulators could do it in the 1990s with a mere 25MHz of processing power. But emulating those old consoles <em>accurately</em>—well, that's another challenge entirely; accurate emulators may need up to 3GHz of power to faithfully recreate aging tech. In this piece we'll take a look at why accuracy is so important for emulators and why it's so hard to achieve.</p>
+<p>Put simply, accuracy is the measure of how well emulation software mimics the original hardware. Apparent compatibility is the most obvious measure of accuracy—will an old game run on my new emulator?—but such a narrow view can paper over many small problems. In truth, most software runs with great tolerance to timing issues and appears to be functioning normally even if timing is off by as much as 20 percent.</p>
+<p>So the question becomes: if we can achieve basic compatibility, why care about improving accuracy further when such improvement comes at a great cost in speed? Two reasons: performance and preservation.</p>
+<p>First, performance. Let's take the case of <em>Speedy Gonzales</em>. This is an SNES platformer with no save functionality, and it's roughly 2-3 hours long. At first glance, it appears to run fine in any emulator. Yet once you reach stage 6-1, you can quickly spot the difference between an accurate emulator and a fast one: there is a switch, required to complete the level, where the game will deadlock if a rare hardware edge case is not emulated. One can imagine the frustration of instantly losing three hours of progress and being met with an unbeatable game. Unless the software does everything in the exact same way the hardware used to, the game remains broken.</p>
+<p>Or consider <em>Air Strike Patrol</em>, where a shadow is drawn under your aircraft. This is done using mid-scanline raster effects, which are extraordinarily resource intensive to emulate. But without the raster effects, your aircraft's shadow will not show up, as you see in the screenshot below. It's easy to overlook, especially if you do not know that it is supposed to be there. But once you actually see it, you realize that it's quite helpful. Your aircraft has the ability to drop bombs, and this shadow acts as a sort of targeting system to determine where they will land.—something that's slightly more difficult without this seemingly minor effect.</p>
+<figure class="image shortcode-img center" style="width:569px"><img src="../../../../../cdn.arstechnica.net/wp-content/uploads/archive/2011/08/01/screen_shot_2011-08-01_at_4-4e37115-intro.png" width="569" height="250"></figure><p>The second issue is preservation. Take a look at Nintendo's Game &amp; Watch hardware. These devices debuted in 1980, and by now most of the 43 million produced have failed due to age or have been destroyed. Although they are still relatively obtainable, their scarcity will only increase, as no additional units will ever be produced. This same problem extends to any hardware: once it's gone, it's gone for good. At that point, emulators are the only way to experience those old games, so they should be capable of doing so accurately.</p>                                            <aside class="ad_wrapper" aria-label="In Content advertisement">
+    <span class="ad_notice">Advertisement </span>    
+    <div class="ad ad_instream"></div>    
+</aside>
+                                                        
+<p>But this accuracy comes at a serious cost. Making an emulator twice as accurate will make it roughly twice as slow; double that accuracy again and you're now four times slower. At the same time, the rewards for this accuracy diminish quickly, as most games look and feel "playable" at modest levels of emulator accuracy. (Most emulators target a "sweet spot" of around 95 percent compatibility with optimal performance.)</p>
+<p>There's nothing wrong with less accurate but speedy emulators, and such code can run on lower-powered hardware like cell phones and handheld gaming devices. These emulators are also more suited for use on laptops where battery life is a concern. But there's something to be said for chasing accuracy, too, and it's what I've attempted to do in my own work. Here's why it matters to me.</p>
+<h3>Doing it in software</h3>
+<p>Back in the late '90s, Nesticle was easily the NES emulator of choice, with system requirements of roughly 25MHz. This performance came at a significant cost: game images were hacked to run on this emulator specifically. Fan-made translations and hacks relied on emulation quirks that rendered games unplayable on both real hardware and on other emulators, creating a sort of lock-in effect that took a long while to break. At the time, people didn't care about how the games originally looked and played in general, they just cared about how they looked and played in this arbitrary and artificial environment.</p>
+<p>These days, the most dominant emulators are Nestopia and Nintendulator, requiring 800MHz and 1.6GHz, respectively, to attain full speed. The need for speed isn't because the emulators aren't well optimized: it's because they are a far more faithful recreation of the original NES hardware in software.</p>
+<p>Now compare these to the older N64 emulator, UltraHLE, whose system requirements were a meager 350MHz Pentium II system. To the casual observer, it can be quite perplexing to see <em>Mario 64</em> requiring less processing power than the original <em>Mario Bros</em>.</p>
+<p>My experience in emulation is in the SNES field, working on the bsnes emulator. I adored the ideal behind Nestopia, and wanted to recreate this level of accuracy for the Super Nintendo. As it turns out, the same level of dedication to accuracy pushed requirements up into the 2-3GHz range, depending on the title.</p>
+<figure class="video"><div class="wrapper" style="padding-bottom: 70.3125%;"><iframe style="display:block" type="text/html" width="640" height="450" src="../../../../../www.youtube.com/embed/jWZ7Q6U2x-c;start=0&amp;wmode=transparent.html" frameborder="0" allowfullscreen></iframe></div><figcaption class="caption"><div class="caption-text">TimeCop, on two very different emulators</div></figcaption></figure><p>Nestopia caught on because its system requirements were paltry for its time, but I have no doubt that releasing it in 1997 would have been disastrous. Since my emulator ultimately required a computing system with more power than half the market, I've seen first-hand the effect of high system specs and the backlash it causes. It's easier to blame the program than to admit your computer isn't powerful enough, but the reality is that faking an entire gaming console in software is an intensive process.</p>                                            <aside class="ad_wrapper" aria-label="In Content advertisement">
+    <span class="ad_notice">Advertisement </span>    
+    <div class="ad ad_instream"></div>    
+</aside>
+                                                        
+<h3>Why accuracy matters</h3>
+<p>So if an emulator appears to run all games correctly, why should we then improve upon it? The simple answer is because it improves the things we don't yet know about. This is particularly prominent in less popular software.</p>
+<p>As an example, compare the spinning triforce animation from the opening to <em>Legend of Zelda</em> on the ZSNES and bsnes emulators. On the former, the triforces will complete their rotations far too soon as a result of the CPU running well over 40 percent faster than a real SNES. These are little details, but if you have an eye for accuracy, they can be maddening.</p>
+<p>I've encountered dozens of titles with obscure quirks. Sometimes the correct, more accurate emulation actually produces a "wrong" result. <em>Super Bonk's</em> attract mode demo actually desynchronizes, causing <em>Bonk</em> to get stuck near a wall on most real systems. And <em>Starfox </em>suffers from significant slowdown issues throughout the game. These are certainly not desirable attributes, but they are correct nonetheless. We wouldn't round pi down to 3 simply because irrational numbers are inconvenient, right?</p>
+<p>I don't deny the advantages of treating classic games as something that can be improved upon: N64 emulators employ stunning high-resolution texture packs and 1080p upscaling, while SNES emulators often provide 2x anti-aliasing for Mode7 graphics and cubic-spline interpolation for audio samples. Such emulated games look and sound better. While there is nothing wrong with this, it is contrary to the goal of writing a hardware-accurate emulator. These improvement techniques typically make it more difficult even to allow for the option of accurate emulation, in fact.</p>
+<p>Another major area where accuracy is a benefit is in fan-created works from translators, ROM hackers, and homebrew developers. Few of them have access to run code on real hardware, so they will often develop their software using emulators. Unfortunately, speed-oriented emulators will often ignore hardware limitations. This is never a problem for a commercially developed game: upon required testing on real hardware, the bug would quickly be discovered and fixed. But if you can only test on a specific emulator, such bugs tend to persist.</p>
+<p>I can name a few examples. The fan translations for <em>Dragon Quest 1&amp;2, Dual Orb 2, Sailor Moon: Another Story </em>and <em>Ys 4</em> all suffered invisible text issues as a result of writing to video RAM while the video processor had it locked out for rendering the screen. Only half of these titles have subsequently been fixed.</p>
+<p>We've known about this hardware limitation since 1997, which consists of a one-line code fix, but the most popular emulator still does not support this behavior. As a result, translations made solely for this emulator continue to cause problems and lock-in. Who would want to use a more accurate emulator that couldn't run a large number of their favorite fan translations?</p>
+<p>It doesn't stop there, though. The original hardware had a delay upon asking the math unit for multiplication and division results. Again, any commercial game ever released would respect those delays, but fan hacks led to a <em>Zelda</em> translation's music cutting out and to the <em>Super Mario World</em> chain-chomp patch going haywire.</p>
+<p>Or an emulator might ignore the fact that the sound processor writes echo samples into shared RAM. Not a problem until you wind up with hacks that use wildly unrealistic echo buffer sizes, which in turn end up overwriting the entire audio program in memory, crashing and burning in spectacular fashion. This one issue single-handedly renders dozens of <em>Super Mario World</em> fan-made levels unplayable.</p>
+
+                                                </div>
+
+            
+                            <nav class="page-numbers">Page: <span class="numbers">1 <a href="https://arstechnica.com/gaming/2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator/2/">2</a> <a href="https://arstechnica.com/gaming/2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator/3/">3</a> <a href="https://arstechnica.com/gaming/2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator/2/"><span class="next">Next <span class="arrow">&rarr;</span></span></a></span></nav>
+            
+        </section>
+    </div>
+    <div class="xrail">
+        <div class="xrail-content">
+            
+            
+            
+                            <div class="ars-interlude-container ad_xrail ad_xrail_top"></div>
+            
+            
+                            <aside class="ad ad_xrail ad_xrail_top ad_xrail_last" aria-label="Top sidebar advertisement"></aside>
+                    </div>
+    </div>
+</div>
+
+<div class="column-wrapper">
+    <div class="left-column">
+        <div id="social-footer">
+            <a title="154 posters participating" class="comment-count icon-comment-bubble-down" href="https://arstechnica.com/gaming/2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator/?comments=1">
+      <h4 class="comment-count-before">reader comments</h4>
+    
+  <span class="comment-count-number">237</span>
+  <span class="visually-hidden"> with 154 posters participating</span>
+  </a>
+  
+
+<div class="share-links">
+  <h4>Share this story</h4>
+  <ul>
+    <li><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Farstechnica.com%2F%3Fpost_type%3Dpost%26p%3D44524" target="_blank" class="social-icon share-facebook" title="Share on Facebook"><span class="visually-hidden">Share on Facebook</span></a></li>
+    <li><a href="https://twitter.com/share?text=Accuracy+takes+power%3A+one+man%E2%80%99s+3GHz+quest+to+build+a+perfect+SNES+emulator&url=https%3A%2F%2Farstechnica.com%2F%3Fpost_type%3Dpost%26p%3D44524" target="_blank" class="social-icon share-twitter" title="Share on Twitter"><span class="visually-hidden">Share on Twitter</span></a></li>
+    <li><a href="https://www.reddit.com/submit?url=https%3A%2F%2Farstechnica.com%2F%3Fpost_type%3Dpost%26p%3D44524&title=Accuracy+takes+power%3A+one+man%E2%80%99s+3GHz+quest+to+build+a+perfect+SNES+emulator" target="_blank" class="social-icon share-reddit" title="Share on Reddit"><span class="visually-hidden">Share on Reddit</span></a></li>
+  </ul>
+</div>
+        </div>
+                    <!-- cache miss 305:single/author:684cc026276b666574fd902288b36845 -->            </div>
+    <div class="xrail"></div>
+</div>
+<div id="article-footer-wrap">
+            <aside class="ad_wrapper" aria-label="Full width advertisement">
+    <span class="ad_notice">Advertisement </span>        
+    <div class="ad ad_fullwidth fullwidth"></div>
+</aside>
+    
+            <section id="comments-area" class="comments-area column-wrapper">
+  <div class="row comments-row left-column">
+    <a name="comments-bar"></a>
+          <div id="comments-container"></div>
+      <div id="comments-posting-container" class="thick-divide-bottom">
+        <p id="reply">You must <a href="https://arstechnica.com/civis/ucp.php?mode=login&return_to/gaming/2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator/" class="vote_login">login or create an account</a> to comment.</p>
+      </div>
+      </div>
+    <div class="xrail xrail-comments">
+    <div class="xrail-content-wrapper">
+      <div class="xrail-content xrail-content-comments">
+          <aside class="ad ad_xrail ad_xrail_comments" aria-label="Comments sidebar advertisement"></aside>
+      </div>
+    </div>
+        <div class="xrail-content-wrapper xrail-content-wrapper-bottom">
+      <div class="xrail-content xrail-content-comments">
+          <aside class="ad ad_xrail ad_xrail_comments" aria-label="Comments sidebar advertisement"></aside>
+      </div>
+    </div>
+      </div>
+  </section>
+                    <section class="inline-playlist">
+  <div class='ars-video-playlist'>
+    <h3 class="ars-video-playlist-module-header">Channel <span>Ars Technica</span></h3>
+    <div class='ars-video-playlist-module' data-playlist-id='arstechnica-channel-ars-gaming' data-video-options='[]'></div>
+  </div>
+</section>
+                <div class="prev-next-links">
+  <a href="https://arstechnica.com/science/2011/08/african-crested-rats-deter-predators-by-borrowing-poison-bark/" rel="prev"><span class="arrow">&larr;</span> Previous story</a>  <a href="https://arstechnica.com/gaming/2011/08/cut-the-rope-experiments-comes-to-ios-for-1-brings-new-gimmicks/" rel="next">Next story <span class="arrow">&rarr;</span></a></div>
+        <footer id="article-footer">
+  <div id="recommendations-footer">
+    <div id="story-recommendations">
+  <div class="heading-column">
+    <h3>Related Stories</h3>
+  </div>
+  <ul id="story-recs" class="rec-wrap"></ul>
+</div>
+        <div id="sponsored-recommendations">
+  <div class="OUTBRAIN" data-src="DROP_PERMALINK_HERE" data-widget-id="AR_14"></div>
+  <script type="text/javascript" async="async" src="../../../../../widgets.outbrain.com/outbrain.js"></script>
+</div>
+        <div id="latest-stories">
+  <div class="heading-column">
+    <h3>Today on Ars</h3>
+  </div>
+  <ul id="latest-recs" class="rec-wrap"></ul>
+</div>
+  </div>
+</footer>
+    </div>
+  </article>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="nav-footer">
+
+  <section>
+    <ul>
+      <li><a href="/store/">Store</a></li>
+      <li><a href="/store/product/subscriptions/">Subscribe</a></li>
+      <li><a href="/about-us/">About Us</a></li>
+      <li><a href="/rss-feeds/">RSS Feeds</a></li>
+      <li><a rel="nofollow" href="http://arstechnica.com/gaming/2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator/?view=mobile">View Mobile Site</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <ul>
+      <li><a href="/contact-us/">Contact Us</a></li>
+      <li><a href="/staff-directory/">Staff</a></li>
+      <li><a href="/advertise-with-us/">Advertise with us</a></li>
+      <li><a href="/reprints/">Reprints</a></li>
+    </ul>
+  </section>
+
+  <section class="footer-newsletter">
+    <div class="newsletter-wrapper">
+      <h3>
+        <a href="/newsletters/">Newsletter Signup</a>
+      </h3>
+      <p>Join the Ars Orbital Transmission mailing list to get weekly updates delivered to your inbox.</p>
+      <a class="button" href="/newsletters/">Sign me up &rarr;</a>
+    </div>
+  </section>
+
+</nav>
+
+<section class="footer-terms-logo">
+  <div class="cn-logo">
+    <a href="http://condenast.com/" class="icon icon-logo-cn-us" title="Visit Condé Nast"></a>
+  </div>
+
+  <p id="copyright-terms">
+  CNMN Collection<br>
+  WIRED Media Group<br>
+  © 2021 Condé Nast. All rights reserved. Use of and/or registration on any portion of this site constitutes acceptance of our <a href="https://www.condenast.com/user-agreement/">User Agreement</a> (updated 1/1/20) and <a href="https://www.condenast.com/privacy-policy/">Privacy Policy and Cookie Statement</a> (updated 1/1/20) and <a href="/amendment-to-conde-nast-user-agreement-privacy-policy/">Ars Technica Addendum</a> (effective 8/21/2018). Ars may earn compensation on sales from links on this site. <a href="/affiliate-link-policy/">Read our affiliate link policy</a>.<br>
+  <a href="https://www.condenast.com/privacy-policy/#california">Your California Privacy Rights</a> | <a id="ot-sdk-btn" class="ot-sdk-show-settings">Do Not Sell My Personal Information</a><br>
+  The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of Condé Nast.<br>
+  <a href="https://www.condenast.com/online-behavioral-advertising-oba-and-how-to-opt-out-of-oba/#clickheretoreadmoreaboutonlinebehavioraladvertising(oba)">Ad Choices</a>
+</p>
+</section>
+  </footer>
+</div>
+
+<script type="text/javascript" src="../../../../../cdn.arstechnica.net/wp-content/themes/ars/assets/js/main-f2296fa805.js"></script>
+
+
+<!-- cache hit 305:single/javascript-footer:17f35fdd1fdb65c876389b3cdb1c5c04 -->
+        
+
+
+  
+  <!-- Parse.ly start -->
+<script id="parsely-cfg" src="../../../../../fpa-cdn.arstechnica.com/keys/arstechnica.com/p.js"></script>
+<!-- Parse.ly end -->
+
+
+
+
+<script src="../../../../../player.cnevids.com/interlude/arstechnica.js" async></script>
+<script id="conde-polar" src="../../../../../cdn.mediavoice.com/nativeads/script/condenastcorporate/conde-asa-polar-master.js" async></script>
+<script>
+  (function () {
+      function DQ() {
+        var queue = window.sparrowQueue;
+        this.push = fn => fn();
+        window.sparrowQueue = this;
+        while (queue.length) {
+          queue.shift()();
+        }
+      }
+      function e(t, e) {
+        var n, a, o;
+        a = !1, n = document.createElement("script"), n.type = "text/javascript", n.src = t, n.onload = n.onreadystatechange = function () {
+          a || this.readyState && "complete" != this.readyState || (a = !0, e ? e() : !0)
+        }, o = document.getElementsByTagName("script")[0], o.parentNode.insertBefore(n, o)
+      }
+      if (location.search.indexOf('no_sparrow') < 0) {
+        e("https://pixel.condenastdigital.com/config/v2/production/ars-technica.config.js", function () {
+          e("https://pixel.condenastdigital.com/sparrow.min.js", function () {
+            if (window.SparrowConfigV2) {
+              window.sparrow = new window.Sparrow(window.SparrowConfigV2);
+              new DQ();
+            }
+          })
+        })
+      }
+    })();
+</script>
+<script type="text/javascript" src="../../../../../s.skimresources.com/js/100098X1555750.skimlinks.js"></script>
+</body>
+</html>

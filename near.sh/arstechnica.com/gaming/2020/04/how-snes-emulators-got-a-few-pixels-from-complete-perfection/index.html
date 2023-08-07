@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<title>How SNES emulators got a few pixels from complete perfection | Ars Technica</title>
+    <script type="text/javascript">
+    ars = {"ASSETS":"https:\/\/cdn.arstechnica.net\/wp-content\/themes\/ars\/assets","HOME_URL":"https:\/\/arstechnica.com","LOGIN_URL":"https:\/\/arstechnica.com\/services\/login-desktop.html?v=1","CIVIS":"\/civis","THEME":"light","VIEW":"grid","MOBILE":false,"SUBSCRIBER":false,"PLUS_PLUS":false,"LOGGED":false,"USER_ID":null,"ENV":"production","AD":{"tags":["bsnes","byuu","emulation","higan","snes"],"channel":"gaming","slug":"how-snes-emulators-got-a-few-pixels-from-complete-perfection","template_type":"article","queue":[],"server":"production"},"TOTAL":100630,"UNREAD":0,"RECENT":[1776504,1776577,1776421,1775718,1776495,1776542,1776441,1776088,1776429,1776394,1776333,1776215,1776256,1776079,1775882,1776140,1776180,1776089,1776055,1776057,1775951,1775968,1770375,1775943,1775917],"LOGINS":true,"CROSS":false,"PARSELY":"arstechnica.com","COMMENTS":false,"HOMEPAGE":false,"SITE":1,"READY":[],"SHOW_ADS":true,"IMG_PROXY":"https:\/\/cdn.arstechnica.net\/i\/","CATEGORY":"gaming","PAGETITLE":"","ZEN_MODE":false};
+  </script>
+
+  <link rel="stylesheet" type="text/css" media="all" href="../../../../../cdn.arstechnica.net/wp-content/themes/ars/assets/css/main-dca8fb7448.css" />
+      <link rel="alternate" type="application/rss+xml" href="http://feeds.arstechnica.com/arstechnica/index/" />
+  <link rel="shortcut icon" href="../../../../../cdn.arstechnica.net/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="../../../../../cdn.arstechnica.net/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../../../cdn.arstechnica.net/wp-content/themes/ars/assets/img/ars-ios-icon-d9a45f558c.png" />
+  <link rel="mask-icon" href="../../../../../cdn.arstechnica.net/wp-content/themes/ars/assets/img/ars-macos-safari-8997f76b21.svg" color="#ff4e00">
+  <link rel="icon" sizes="192x192" href="../../../../../cdn.arstechnica.net/wp-content/themes/ars/assets/img/material-ars-db41652381.png" />
+
+    <meta name="application-name" content="Ars Technica"/>
+  <meta name="msapplication-starturl" content="http://arstechnica.com/"/>
+  <meta name="msapplication-tooltip" content="Ars Technica: Serving the technologist for 1.2 decades"/>
+  <meta name="msapplication-task" content="name=News;action-uri=http://arstechnica.com/;icon-uri=https://cdn.arstechnica.net/favicon.ico"/>
+  <meta name="msapplication-task" content="name=Features;action-uri=http://arstechnica.com/features/;icon-uri=https://cdn.arstechnica.net/ie-jump-menu/jump-features.ico"/>
+  <meta name="msapplication-task" content="name=OpenForum;action-uri=http://arstechnica.com/civis/;icon-uri=https://cdn.arstechnica.net/ie-jump-menu/jump-forum.ico"/>
+  <meta name="msapplication-task" content="name=Subscribe;action-uri=http://arstechnica.com/subscriptions/;icon-uri=https://cdn.arstechnica.net/ie-jump-menu/jump-subscribe.ico"/>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="advertising" content="ask" />
+  <meta property="fb:admins" content="592156917" />
+  <meta property="fb:admins" content="108943" />
+    <meta property="fb:pages" content="19374573752" />
+  
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="theme-color" content="#000000" />
+
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- cache hit 305:single/meta:dbe4613475e9b326988d1cd5f1229f76 -->
+<meta name='parsely-page' content='{"title":"How SNES emulators got a few pixels from complete perfection","link":"https:\/\/arstechnica.com\/gaming\/2020\/04\/how-snes-emulators-got-a-few-pixels-from-complete-perfection\/","type":"post","author":"Ars Staff","post_id":1662472,"pub_date":"2020-04-01T11:45:47Z","section":"Gaming &amp; Culture","tags":["bsnes","byuu","emulation","higan","snes","type: feature"],"image_url":"https:\/\/cdn.arstechnica.net\/wp-content\/uploads\/2020\/03\/bsnes-xray-cart-150x150.jpg"}'>
+<meta name='parsely-metadata' content='{"type":"feature","title":"How SNES emulators got a few pixels from complete perfection","post_id":1662472,"lower_deck":"Bsnes needs your help to decode some three-decades-old PPU chips.","image_url":"https:\/\/cdn.arstechnica.net\/wp-content\/uploads\/2020\/03\/bsnes-xray-cart-150x150.jpg","listing_image_url":"https:\/\/cdn.arstechnica.net\/wp-content\/uploads\/2020\/03\/bsnes-xray-cart-360x200.jpg"}'>
+
+<link rel="canonical" href="" />
+
+<link rel="amphtml" href="https://arstechnica.com/gaming/2020/04/how-snes-emulators-got-a-few-pixels-from-complete-perfection/?amp=1">
+
+<link rel="shorturl" href="https://arstechnica.com/?p=1662472" />
+
+<meta name="description" content="Bsnes needs your help to decode some three-decades-old PPU chips." />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://arstechnica.com/gaming/2020/04/how-snes-emulators-got-a-few-pixels-from-complete-perfection/">
+<meta name="twitter:title" content="How SNES emulators got a few pixels from complete perfection">
+<meta name="twitter:description" content="Bsnes needs your help to decode some three-decades-old PPU chips.">
+
+<meta name="twitter:site" content="@arstechnica">
+<meta name="twitter:domain" content="arstechnica.com">
+
+<meta property="og:site_name" content="Ars Technica" />
+
+<meta name="twitter:image:src" content="https://cdn.arstechnica.net/wp-content/uploads/2020/03/bsnes-xray-cart-760x380.jpg">
+<meta name="twitter:image:width" content="760">
+<meta name="twitter:image:height" content="380">
+
+
+<meta property="og:url" content="https://arstechnica.com/gaming/2020/04/how-snes-emulators-got-a-few-pixels-from-complete-perfection/" />
+<meta property="og:title" content="How SNES emulators got a few pixels from complete perfection" />
+<meta property="og:image" content="https://cdn.arstechnica.net/wp-content/uploads/2020/03/bsnes-xray-cart-760x380.jpg" />
+<meta property="og:description" content="Bsnes needs your help to decode some three-decades-old PPU chips." />
+<meta property="og:type" content="article" />
+  <!-- cache hit 305:single/header:dbe4613475e9b326988d1cd5f1229f76 -->
+        
+  
+      <!-- Google Tag Manager DataLayer -->
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({"event":"data-layer-loaded","user":{"ars_userId":undefined,"amg_userId":undefined,"uID":undefined,"sID":undefined,"loginStatus":false,"subscriberStatus":"none","infinityId":undefined,"registrationSource":undefined,"mdw_cnd_id":undefined,"monthlyVisits":undefined,"accessPaywall":undefined,"view":"grid","theme":"light","show_comments":false},"content":{"pageTemplate":"single","pageType":"article|feature","contentCategory":"gaming","section":"gaming","subsection":undefined,"contributor":"Ars Staff","contentID":1662472,"contentLength":6239,"display":"How SNES emulators got a few pixels from complete perfection","contentSource":"web","pageAssets":undefined,"uniqueContentCount":undefined,"monthlyContentCount":undefined,"publishDate":"2020-04-01T11:45:47+00:00","modifiedDate":"2020-04-01T13:02:32+00:00","keywords":"bsnes|byuu|emulation|higan|SNES","dataSource":undefined},"marketing":{"campaignName":undefined,"circCampaignId":undefined,"internalCampaignId":undefined,"brand":"Ars Technica","certified_mrc_data":undefined,"condeNastId":undefined},"page":{"pID":undefined,"syndicatorUrl":undefined,"pageURL":"https:\/\/arstechnica.com\/?p=1662472","canonical":"https:\/\/arstechnica.com\/gaming\/2020\/04\/how-snes-emulators-got-a-few-pixels-from-complete-perfection\/","canonicalPathName":"\/gaming\/2020\/04\/how-snes-emulators-got-a-few-pixels-from-complete-perfection\/"},"search":{"facets":undefined,"searchTerms":undefined},"site":{"appVersion":"1.0.0"}});
+</script>
+<!-- End Google Tag Manager DataLayer -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NLXNPCQ');</script>
+<!-- End Google Tag Manager -->
+<script type="text/javascript">
+class ABTest {
+  constructor(post_id, init_method) {
+    this.post_id = post_id;
+    this.ajaxurl = '/services/ars-ajax-handler.php';
+    this.expireDays = 1/48; // 30 min
+    this.group = this.getGroup();
+    this.uid = this.getUid();
+    this.init_method = init_method;
+    this.setTitle();
+
+    if (this.init_method === 'click') {
+      this.click();
+    }
+    else {
+      this.impression();
+    }
+  }
+
+  setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+  }
+
+  getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+
+  // Retrieves a unique id for determining whether the event should be recorded
+  getUid() {
+    var uid = this.getCookie('ars_ab_' + this.post_id + '_uid');
+    if (!uid) {
+      uid = (Math.random() + 1).toString(36).substring(2,7);
+      this.setCookie('ars_ab_' + this.post_id + '_uid', uid, this.expireDays);
+    }
+    return uid;
+  };
+
+  // Places the user in either A or B for this post id
+  getGroup() {
+    var group = this.getCookie('ars_ab_' + this.post_id + '_group');
+    if (!group) {
+      group = String.fromCharCode(Math.floor(Math.random() * 2) + 65).toLowerCase();
+      this.setCookie('ars_ab_' + this.post_id + '_group', group, this.expireDays);
+    }
+    return group;
+  };
+
+  // Records a headline impression (from homepage or other listing)
+  impression() {
+    // Send fake ajax
+    var params = {
+      nonce:        '9fff91aced',
+      action:       'ars_ab_impression',
+      id:           this.post_id,
+      group:        this.group,
+      uid:          this.uid,
+      ts:           (new Date()).getTime()
+    };
+    var url = this.ajaxurl + '?' + this.encodeParams(params);
+    document.write('\x3Cscript type="text/javascript" src="' + url + '">\x3C/script>');
+  };
+
+  // Records a headline click from the actual post page
+  click() {
+    // Send fake ajax
+    var params = {
+      nonce:        '51b03931a5',
+      action:       'ars_ab_click',
+      id:           this.post_id,
+      group:        this.group,
+      uid:          this.uid,
+      ts:           (new Date()).getTime()
+    };
+    var url = this.ajaxurl + '?' + this.encodeParams(params);
+    document.write('\x3Cscript type="text/javascript" src="' + url + '">\x3C/script>');
+  };
+
+  // If user is in B group, dynamically set title
+  setTitle() {
+    if (this.group == 'b') {
+      var span = document.getElementById('ars_ab_' + this.post_id);
+      var title = span.parentNode;
+      title.innerHTML = span.getAttribute('data-title-b');
+    }
+  };
+
+  encodeParams(data) {
+    var ret = [];
+    for (var d in data)
+      ret.push(encodeURIComponent(d) + "=" + encodeURIComponent(data[d]));
+    return ret.join("&");
+  };
+
+};
+</script><!-- OneTrust Cookies Consent Notice start -->
+<script 
+    src="../../../../../cdn.cookielaw.org/scripttemplates/otSDKStub.js"  
+    type="text/javascript" charset="UTF-8" 
+    data-domain-script="b10882a1-8446-4e7d-bfb2-ce2c770ad910">
+</script>
+<script type="text/javascript">function OptanonWrapper(){};</script>
+<script 
+    src="../../../../../cdn.cookielaw.org/opt-out/otCCPAiab.js" 
+    type="text/javascript" 
+    charset="UTF-8" 
+    ccpa-opt-out-ids="C0002,C0003,C0004,C0005" 
+    ccpa-opt-out-geo="ca" 
+    ccpa-opt-out-lspa="true">
+</script> 
+<!-- OneTrust Cookies Consent Notice end -->
+<script src="../../../../../www.googletagservices.com/tag/js/gpt.js" id="gpt-script" async ></script>
+<script>window.googletag=window.googletag||{};window.googletag.cmd=window.googletag.cmd||[];window.cns=window.cns||{};window.cns.queue=[];window.cns.async=function(s,c){cns.queue.push({service:s,callback:c})};window.sparrowQueue=window.sparrowQueue||[];</script>
+<link rel="dns-prefetch" href="//aax.amazon-adsystem.com">
+<link rel="preconnect" href="//aax.amazon-adsystem.com" crossorigin>
+<link rel="preconnect" href="https://mb.moatads.com" crossorigin>
+<script src="../../../../../c.amazon-adsystem.com/aax2/apstag.js" async></script>
+<script src="../../../../../cdn.arstechnica.net/cns/prebid.min;v=1624816577.js"></script>
+<script src="../../../../../js-sec.indexww.com/ht/p/183973-93942139695505.js" async></script>
+<script src="../../../../../z.moatads.com/condenastprebidheader987326845656/moatheader.js" async></script>
+<script>
+  window.cns.pageContext = {"contentType":"article","templateType":"article","channel":"gaming","subChannel":"","slug":"how-snes-emulators-got-a-few-pixels-from-complete-perfection","server":"production","keywords":{"tags":["bsnes","byuu","emulation","higan","snes"],"cm":[],"platform":["wordpress"],"copilotid":""}};
+</script>
+<script src="../../../../../cdn.arstechnica.net/cns/ars-technica.min;v=1624816577.js"></script>
+<script type="text/javascript" src="../../../../../cdn.arstechnica.net/wp-content/themes/ars/assets/js/ars-84a4ab0802.ads.us.js"></script>
+</head>
+<body class="post-template-default single single-post postid-1662472 single-format-standard grid-view light blog-us">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="../../../../../www.googletagmanager.com/ns;id=GTM-NLXNPCQ.html" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  	<aside class="ad ad_crown" aria-label="Top of page advertisement"></aside>
+
+<div class="site-wrapper">
+  <a class="screen-reader-text skip-link" href="" aria-label="Skip to main content">Skip to main content</a>    
+  <header class="site-header">
+    <div class="header-left">
+      <a href="https://arstechnica.com" id="header-logo" title="Ars Technica Homepage">
+      <span class="icon icon-logo-ars-us"></span>
+  </a>
+    </div>
+
+    <div class="header-right">
+      <nav id="header-nav-primary">
+        <ul>
+          
+  <li><a class="nav-link section-information-technology " href="/information-technology/">Biz &amp; IT</a></li>
+  <li><a class="nav-link section-gadgets " href="/gadgets/">Tech</a></li>
+  <li><a class="nav-link section-science " href="/science/">Science</a></li>
+  <li><a class="nav-link section-tech-policy " href="/tech-policy/">Policy</a></li>
+  <li><a class="nav-link section-cars " href="/cars/">Cars</a></li>
+  <li><a class="nav-link section-gaming active" href="/gaming/">Gaming &amp; Culture</a></li>
+
+<li><a class="nav-link store" href="/store/">Store</a></li>
+<li><a class="nav-link forums" href="/civis/">Forums</a></li>
+        </ul>
+      </nav>
+
+              <a href="/store/product/subscriptions/" class="header-highlight-link">Subscribe</a>
+                  <div class="dropdown" id="header-search">
+        <a href="/search/" class="dropdown-toggle search-toggle" aria-label="Search" aria-expanded="false">
+          <span class="icon icon-search-mag-glass"></span>
+        </a>
+        <div class="dropdown-content">
+          <form action="/search/" method="GET" id="search_form">
+  <input type="hidden" name="ie" value="UTF-8">
+  <input type="text" name="q" id="hdr_search_input" value="" aria-label="Search..." placeholder="Search...">
+</form>
+<a class="nav-search-close">Close</a>
+        </div>
+      </div>
+      <div class="dropdown dropdown-mega" id="header-burger">
+        <a href="" class="dropdown-toggle" aria-label="Menu" aria-expanded="false">
+          <span></span>
+        </a>
+        <div id="site-menu" class="dropdown-content">
+          <section class="burger-navigate">
+  <h3>
+    <span class="icon icon-half-target"></span>
+    Navigate
+  </h3>
+  <ul>
+  <li><a class="nav-link store" href="/store/">Store</a></li>
+  <li><a class="nav-link subscribe" href="/store/product/subscriptions/">Subscribe</a></li>
+    <li><a class="nav-link videos" href="http://video.arstechnica.com/">Videos</a></li>
+    <li><a class="nav-link section-features" href="/features/">Features</a></li>
+    <li><a class="nav-link section-reviews" href="/reviews/">Reviews</a></li>
+  </ul>
+
+  <ul>
+    <li><a class="nav-link page-rss-feeds" href="/rss-feeds/">RSS Feeds</a></li>
+    <li><a class="nav-link mobile" href="/?view=mobile">Mobile Site</a></li>
+  </ul>
+
+  <ul>
+    <li><a class="nav-link page-about-us" href="/about-us/">About Ars</a></li>
+    <li><a class="nav-link page-staff-directory" href="/staff-directory/">Staff Directory</a></li>
+    <li><a class="nav-link page-contact-us" href="/contact-us/">Contact Us</a></li>
+  </ul>
+
+  <ul>
+    <li><a class="nav-link page-advertise-with-us" href="/advertise-with-us/">Advertise with Ars</a></li>
+    <li><a class="nav-link page-reprints" href="/reprints/">Reprints</a></li>
+  </ul>
+</section>
+
+<section class="burger-filter">
+  <h3>
+    <span class="icon icon-half-mag"></span>
+    Filter by topic
+  </h3>
+  <ul id="burger-nav-primary">
+    
+  <li><a class="nav-link section-information-technology " href="/information-technology/">Biz &amp; IT</a></li>
+  <li><a class="nav-link section-gadgets " href="/gadgets/">Tech</a></li>
+  <li><a class="nav-link section-science " href="/science/">Science</a></li>
+  <li><a class="nav-link section-tech-policy " href="/tech-policy/">Policy</a></li>
+  <li><a class="nav-link section-cars " href="/cars/">Cars</a></li>
+  <li><a class="nav-link section-gaming active" href="/gaming/">Gaming &amp; Culture</a></li>
+
+<li><a class="nav-link store" href="/store/">Store</a></li>
+<li><a class="nav-link forums" href="/civis/">Forums</a></li>
+  </ul>
+</section>
+
+<section class="burger-settings">
+  <h3>
+    <span class="icon icon-half-gear"></span>
+    Settings
+  </h3>
+  <div>
+    <div class="burger-layout">
+      
+<p>Front page layout</p>
+<div class="burger-layout-grid">
+  <a rel="nofollow" href="http://arstechnica.com/gaming/2020/04/how-snes-emulators-got-a-few-pixels-from-complete-perfection/?view=grid" class="">
+    <span class="icon icon-grid"></span><br>
+    Grid
+    <div class="faux-radio active"></div>
+      </a>
+</div>
+
+<div class="burger-layout-list">
+  <a rel="nofollow" href="http://arstechnica.com/gaming/2020/04/how-snes-emulators-got-a-few-pixels-from-complete-perfection/?view=archive" class="">
+    <span class="icon icon-list"></span><br>
+    List
+    <div class="faux-radio "></div>
+      </a>
+</div>
+
+    </div>
+    <div class="burger-theme">
+      
+<p>Site theme</p>
+<div class="burger-theme-light">
+  <a rel="nofollow" href="http://arstechnica.com/gaming/2020/04/how-snes-emulators-got-a-few-pixels-from-complete-perfection/?theme=light" class="">
+    <span><span>Black on white</span></span>
+    <div class="faux-radio active"></div>
+      </a>
+</div>
+
+<div class="burger-theme-dark">
+  <a rel="nofollow" href="http://arstechnica.com/gaming/2020/04/how-snes-emulators-got-a-few-pixels-from-complete-perfection/?theme=dark" class="">
+    <span><span>White on black</span></span>
+    <div class="faux-radio "></div>
+      </a>
+</div>
+    </div>
+  </div>
+</section>
+        </div>
+      </div>
+      <div class="dropdown dropdown-mega" id="header-account">
+      <a href="https://arstechnica.com/civis/ucp.php?mode=login&return_to=%2Fgaming%2F2020%2F04%2Fhow-snes-emulators-got-a-few-pixels-from-complete-perfection%2F" class="dropdown-toggle" aria-expanded="false">
+      Sign in
+      <span class="icon dropdown-indicator icon-drop-indicator"></span>
+    </a>
+    <div class="dropdown-content">
+    <section class="profile-activity">
+      <h3>
+        <span class="icon icon-half-bubble-up"></span>
+        Comment activity
+      </h3>
+              <p>Sign up or login to join the discussions!</p>
+          </section>
+
+    <section class="profile-settings">
+              <form id="login-form" action="https://arstechnica.com/civis/ucp.php?mode=login" method="post">
+  <input type="text" name="username" id="username" placeholder="Username or Email" aria-label="Username or Email" />
+  <input type="password" name="password" id="password"  placeholder="Password" aria-label="Password" />
+  <input type="submit" value="Submit" class="button button-orange button-wide" name="login" />
+  <label id="remember-label">
+    <input type="checkbox" name="autologin" id="autologin" />
+  Stay logged in</label> <span>|</span> <a href="/civis/ucp.php?mode=sendpassword">Having trouble?</a>
+
+  <input type="hidden" name="redirect" value="./ucp.php?mode=login&amp;autoredirect=1&amp;return_to=%2Fgaming%2F2020%2F04%2Fhow-snes-emulators-got-a-few-pixels-from-complete-perfection%2F" />
+  <input type="hidden" name="return_to" value="/gaming/2020/04/how-snes-emulators-got-a-few-pixels-from-complete-perfection/" />
+  <input type="hidden" name="from_homepage" value="1" />
+</form>
+<div class="register-account">
+  <span>Sign up to comment and more</span>
+  <a href="https://arstechnica.com/civis/ucp.php?mode=register" class="signup-btn button button-wide">Sign up</a>
+</div>
+      
+    </section>
+  </div>
+</div>
+    </div>
+  </header>
+
+        
+  <main id="main" class="content-wrapper">
+
+<script type="text/javascript">
+  ars.ARTICLE = {"url":"https:\/\/arstechnica.com\/gaming\/2020\/04\/how-snes-emulators-got-a-few-pixels-from-complete-perfection\/","short_url":"https:\/\/arstechnica.com\/?p=1662472","title":"How SNES emulators got a few pixels from complete perfection","author":0,"id":1662472,"topic":1466067,"pages":3,"current_page":1,"superscroll":true,"promoted":[38770445,38773562],"single_page":false,"comments":99,"fullwidth":false,"slug":"how-snes-emulators-got-a-few-pixels-from-complete-perfection","arsStaff":{"104481":{"name":"Aaron Zimmerman","title":"Copyeditor","staff":true},"332715":{"name":"Andrew Cunningham","title":"Reviews Editor Emeritus","staff":false},"1002":{"name":"Aurich Lawson","title":"Creative Director","staff":true},"509873":{"name":"Beth Mole","title":"Health Reporter","staff":true},"453791":{"name":"Cathleen O'Grady","title":"Contributing science reporter","staff":true},"102179":{"name":"Chris Lee","title":"Associate writer","staff":true},"821742":{"name":"Corey Gaskin","title":"Senior Commerce Writer","staff":true},"329388":{"name":"Dan Goodin","title":"Security Editor","staff":true},"254631":{"name":"Diana Gitig","title":"Associate Writer","staff":false},"25862":{"name":"Eric Bangeman","title":"Managing Editor","staff":true},"512413":{"name":"Eric Berger","title":"Senior Space Editor","staff":true},"46707":{"name":"Iljitsch van Beijnum","title":"Associate Writer","staff":false},"316010":{"name":"Jason Marlin","title":"Technical Director","staff":true},"746799":{"name":"Jennifer Ouellette","title":"Senior Writer","staff":true},"15365":{"name":"Jeremy Reimer","title":"Senior Niche Technology Historian","staff":false},"4086":{"name":"Jim Salter","title":"Technology Reporter","staff":true},"52979":{"name":"John Timmer","title":"Senior Science Editor","staff":true},"312082":{"name":"Jon Brodkin","title":"Senior IT Reporter","staff":true},"14317":{"name":"Jonathan M. Gitlin","title":"Automotive Editor","staff":true},"998":{"name":"Ken Fisher","title":"Editor in Chief","staff":true},"440179":{"name":"Kerry Staurseth","title":"Associate Copyeditor","staff":true},"328283":{"name":"Kyle Orland","title":"Senior Gaming Editor","staff":true},"10243":{"name":"Lee Hutchinson","title":"Senior Technology Editor","staff":true},"173191":{"name":"Matthew Lasar","title":"Associate writer","staff":true},"182268":{"name":"Nate Anderson","title":"Deputy Editor","staff":true},"330533":{"name":"Nathan Mattise","title":"Features Editor","staff":true},"1991":{"name":"Ohrmazd","title":"","staff":false},"391727":{"name":"Ron Amadeo","title":"Reviews Editor","staff":true},"348927":{"name":"Sam Machkovech","title":"Tech Culture Editor","staff":true},"588289":{"name":"Samuel Axon","title":"Senior Reviews Editor","staff":true},"294205":{"name":"Scott K. Johnson","title":"Associate Writer","staff":true},"671621":{"name":"Steven Klein","title":"Developer","staff":false},"163185":{"name":"Tim De Chant","title":"","staff":false},"173910":{"name":"Timothy B. Lee","title":"Senior tech policy reporter","staff":true}},"tags":["bsnes","byuu","emulation","higan","snes"],"zen_mode":false,"vote_sentiments":[{"sentiment_id":"1","sentiment":"agree","direction":"positive","icon":null,"label":"Agree"},{"sentiment_id":"3","sentiment":"interesting","direction":"positive","icon":null,"label":"Interesting"},{"sentiment_id":"5","sentiment":"funny","direction":"positive","icon":null,"label":"Funny"},{"sentiment_id":"6","sentiment":"addsto","direction":"positive","icon":null,"label":"Adds to Story"},{"sentiment_id":"7","sentiment":"disagree","direction":"negative","icon":null,"label":"Disagree"},{"sentiment_id":"8","sentiment":"inaccurate","direction":"negative","icon":null,"label":"Inaccurate"},{"sentiment_id":"11","sentiment":"pointless","direction":"negative","icon":null,"label":"Doesn't Contribute"},{"sentiment_id":"12","sentiment":"abusive","direction":"negative","icon":null,"label":"Abusive"}]};
+</script>
+
+<article itemscope itemtype="http://schema.org/NewsArticle" class="article-single standalone intro-standard " id="">
+      <div class="column-wrapper">
+    <div class="left-column">
+        <header class="article-header">
+            <h4 class="post-upperdek">
+      We're looking for perfection, not action    &mdash;
+</h4>
+            <h1 itemprop="headline">How SNES emulators got a few pixels from complete perfection</h1>
+            <h2 itemprop="description">Bsnes needs your help to decode some three-decades-old PPU chips.</h2>
+            <section class="post-meta">
+
+  
+<p class="byline" itemprop="author creator" itemscope itemtype="http://schema.org/Person">
+      <a itemprop="url" href="https://arstechnica.com/author/ars-staff/" rel="author"><span itemprop="name">byuu</span></a>
+    -  <time class="date" data-time="1585741547" datetime="2020-04-01T11:45:47+00:00">Apr 1, 2020 11:45 am UTC</time>
+</p>
+
+
+  
+</section>        </header>
+        <section class="article-guts">
+            <div itemprop="articleBody" class="article-content post-page">
+                                    
+<figure class="intro-image intro-left"><img src="../../../../../cdn.arstechnica.net/wp-content/uploads/2020/03/bsnes-xray-cart-800x450.jpg" alt="We're so close to having an emulator that can perfectly recreate every single function of real SNES hardware and software."><figcaption class="caption"><div class="caption-text"><a href="https://cdn.arstechnica.net/wp-content/uploads/2020/03/bsnes-xray-cart.jpg" class="enlarge-link" data-height="563" data-width="1000">Enlarge</a> <span class="sep">/</span> We're so close to having an emulator that can perfectly recreate every single function of real SNES hardware and software.</div><div class="caption-credit">Aurich Lawson</div></figcaption></figure><aside id="social-left" class="social-left" aria-label="Read the comments or share this article"><a title="76 posters participating" class="comment-count icon-comment-bubble-down" href="https://arstechnica.com/gaming/2020/04/how-snes-emulators-got-a-few-pixels-from-complete-perfection/?comments=1">
+      <h4 class="comment-count-before">reader comments</h4>
+    
+  <span class="comment-count-number">99</span>
+  <span class="visually-hidden"> with 76 posters participating</span>
+  </a>
+  
+
+<div class="share-links">
+  <h4>Share this story</h4>
+  <ul><li><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Farstechnica.com%2F%3Fpost_type%3Dpost%26p%3D1662472" target="_blank" class="social-icon share-facebook" title="Share on Facebook"><span class="visually-hidden">Share on Facebook</span></a></li>
+    <li><a href="https://twitter.com/share?text=How+SNES+emulators+got+a+few+pixels+from+complete+perfection&amp;url=https%3A%2F%2Farstechnica.com%2F%3Fpost_type%3Dpost%26p%3D1662472" target="_blank" class="social-icon share-twitter" title="Share on Twitter"><span class="visually-hidden">Share on Twitter</span></a></li>
+    <li><a href="https://www.reddit.com/submit?url=https%3A%2F%2Farstechnica.com%2F%3Fpost_type%3Dpost%26p%3D1662472&amp;title=How+SNES+emulators+got+a+few+pixels+from+complete+perfection" target="_blank" class="social-icon share-reddit" title="Share on Reddit"><span class="visually-hidden">Share on Reddit</span></a></li>
+  </ul></div>
+      </aside><!-- cache hit 305:single/related:dbe4613475e9b326988d1cd5f1229f76 --><!-- empty --><p></p><div class="pullbox sidebar story-sidebar right"><div class="story-sidebar-part"><a href="../../../2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator/index.html" class="recommendation-further-reading story-sidebar-part-img" style="background-image:url('https://cdn.arstechnica.net/wp-content/uploads/2011/08/snes-emu-acc-list.jpg');" tabindex="-1" role="presentation" aria-hidden="true"></a><div class="story-sidebar-part-content"><h3>Further Reading</h3><a class="recommendation-further-reading" href="../../../2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator/index.html">Accuracy takes power: one man’s 3GHz quest to build a perfect SNES emulator</a></div></div></div>As the lead coder of <em>bsnes</em>, I've been attempting to perfect Super Nintendo emulation <a href="../../../2011/08/accuracy-takes-power-one-mans-3ghz-quest-to-build-a-perfect-snes-emulator/index.html">for the past 15 years</a>. We are now at a point where that goal is in sight, but there we face one last challenge: accurate cycle timing of the SNES video processors. Getting that final bit of emulation accuracy will require a community effort that I hope some of you can help with. But first, let me recap how far we've come.
+<h2>Where we are</h2>
+<p>Today, SNES emulation is in a very good place. Barring unusual peripherals that are resistant to emulation (such as <a href="https://tcrf.net/Lasabirdie:_Get_in_the_Hole">a light-sensor based golf club</a>, an <a href="https://www.destructoid.com/the-fitness-nut-in-me-wishes-i-had-this-snes-exercise-bike-501569.phtml">exercise bike</a>, or a dial-up modem <a href="http://niwanetwork.org/wiki/JRA-PAT">used to place real-money bets on live horse races</a> in Japan), every officially licensed SNES title is fully playable, and no game is known to have any glaring issues.</p>
+<p>SNES emulation has gotten so precise that I've even taken to splitting my emulator into two versions: <a href="https://byuu.org/higan">higan</a>, which focuses on absolute accuracy and hardware documentation; and <a href="https://byuu.org/bsnes">bsnes</a>, which focuses on performance, features, and ease of use.</p>
+<p>Some amazing things have come out of SNES emulation recently, including:</p>
+<ul><li style="font-weight: 400;"><a href="https://www.tested.com/tech/gaming/44376-16_bit-time-capsule-how-emulator-bsnes-makes-a-case-for-software-preservation/">Low-level emulation of all SNES coprocessors</a></li>
+<li style="font-weight: 400;"><a href="https://arstechnica.com/gaming/2019/04/hd-emulation-mod-makes-mode-7-snes-games-look-like-new/">HD mode 7 support</a></li>
+<li style="font-weight: 400;"><a href="https://arstechnica.com/gaming/2019/08/blast-processing-in-2019-how-an-snes-emulator-solved-overclocking/">Slowdown removal</a></li>
+<li style="font-weight: 400;"><a href="https://www.resetera.com/threads/you-can-now-play-snes-games-in-widescreen.117351/">Widescreen support</a></li>
+<li style="font-weight: 400;"><a href="http://www.zeldix.net/c3-msu-1-hacking">MSU1 for CD-audio and FMV</a></li>
+<li style="font-weight: 400;"><a href="https://byuu.net/input/run-ahead">Run-ahead for latency reduction</a></li>
+<li style="font-weight: 400;"><a href="https://byuu.net/audio/dynamic-rate-control">Dynamic rate control for perfect audio-video synchronization</a></li>
+</ul><p>... and much more!</p>
+<p>So that's it, right? Kudos on a job well done, thanks for all the fish? Well... not quite.</p>
+<p>Today, we enjoy cycle-level accuracy for nearly every component of the SNES. The sole exception is the PPUs (picture processing units), which are used to generate the video frames sent to your screen. We <i>mostly</i> know how the PPUs work, but we have to make guesses for some functionality that result in less than total perfection.</p>
+<p>The remaining issues are relatively small ones, in the grand scheme of things. If you're not interested in the pursuit of one hundred percent faithful emulation perfection for its own sake, I am not going to be able to convince you of the need for improving SNES PPU emulation further. As with any goal in life, the closer we get to perfection, the smaller the returns.</p>
+<p>I can tell you why this is important to <i>me</i>: it's my life's work, and I don't want to have to say I came <i>this close</i> to finishing without getting the last piece of it right. I'm getting older, and I won't be around forever. I want this final piece solved so that I can feel confident in my retirement that the SNES has been faithfully and completely preserved through emulation. No stone was left unturned, no area left unfinished. I want to say that it's <i>done.</i></p>
+<p>If you're still intrigued, read on for a deep dive into the background of the problem and my proposed solutions.</p>
+<h2>Modeling the SNES design</h2>
+<p>Let's start by taking a look at the components that make up the SNES:</p>
+<figure class="image shortcode-img center large" style="width:640px"><a href="../../../../../cdn.arstechnica.net/wp-content/uploads/2020/03/snes-system-diagram.png" class="enlarge" data-height="802" data-width="991" alt="Super NES system diagram."><img alt="Super NES system diagram." src="../../../../../cdn.arstechnica.net/wp-content/uploads/2020/03/snes-system-diagram-640x518.png" width="640" height="518" srcset="https://cdn.arstechnica.net/wp-content/uploads/2020/03/snes-system-diagram.png 2x"></a><figcaption class="caption"><div class="caption-text"><a href="../../../../../cdn.arstechnica.net/wp-content/uploads/2020/03/snes-system-diagram.png" class="enlarge-link" data-height="802" data-width="991">Enlarge</a> <span class="sep">/</span> Super NES system diagram.</div></figcaption></figure><p>The arrows indicate the direction that the various processors in the SNES can communicate with one another, and the dotted lines represent memory chip connections.</p>
+<p>The key thing to take away right now is to note that the video and audio output are sent directly from the PPU and DSP specifically. That means they function like “black boxes�? where we don’t have any visibility into what happens inside. This will be important later on.</p>
+<h3>Correctness</h3>
+<p>Imagine you are emulating a CPU's "multiply" instruction, which takes two registers (variables), multiplies them together, and produces a result and some flags that represent the status of the result (such as <a href="https://en.wikipedia.org/wiki/Integer_overflow">overflow</a>).</p>
+<p>We could devise a software program that multiplies every possible value from 0 to 255 as both the multiplier and multiplicand. Then we could output both the numeric and flag results of the multiplication. This would produce two 65,536-entry tables.</p>                                            <aside class="ad_wrapper" aria-label="In Content advertisement">
+    <span class="ad_notice">Advertisement </span>    
+    <div class="ad ad_instream"></div>    
+</aside>
+                                                        
+<p>By analyzing these tables, we could determine exactly how and when the CPU results were set certain ways. Then we could modify our emulators so, when running the same test, we produce exactly the same tables at the same times.</p>
+<p>Now let's say the CPU had 16-bit x 16-bit multiplications. Testing every possible value would generate 4 billion results, which is starting to push what is practical to test in a reasonable amount of time. If the CPU had 32-bit x 32-bit multiplications, it wouldn’t be practical to test all combinations of inputs before the heat death of the universe (with current technology, at least).</p>
+<p>In cases like this, we would have to get more selective with our tests and try to determine exactly when flags might change, when results might overflow, and so forth. Otherwise we'd have tests that would never complete.</p>
+<p>Multiplication is a fairly trivial operation, but this is the general process behind reverse engineering, and it extends to more complex operations such as how the SNES' horizontal blanking DMA (direct memory access) transfers work. We create tests that try to detect what happens on edge cases, then confirm that our emulation behaves identically to a real SNES.</p>
+<h3>Oscillators and cycles</h3>
+<p>The SNES contains two oscillators: a crystal clock that runs at ~21MHz, which controls the CPU and PPUs; and a ceramic resonator that runs at ~24MHz, which controls the SMP and DSP. Cartridge coprocessors will sometimes use the ~21MHz CPU oscillator and sometimes include their own oscillators that run at different frequencies.</p>
+<figure class="image shortcode-img center large" style="width:640px"><a href="../../../../../cdn.arstechnica.net/wp-content/uploads/2020/03/snescircuits.jpg" class="enlarge" data-height="573" data-width="800" alt="Recreating this original Super Famicom circuit board purely in software is harder than it looks."><img alt="Recreating this original Super Famicom circuit board purely in software is harder than it looks." src="../../../../../cdn.arstechnica.net/wp-content/uploads/2020/03/snescircuits-640x458.jpg" width="640" height="458" srcset="https://cdn.arstechnica.net/wp-content/uploads/2020/03/snescircuits.jpg 2x"></a><figcaption class="caption"><div class="caption-text"><a href="../../../../../cdn.arstechnica.net/wp-content/uploads/2020/03/snescircuits.jpg" class="enlarge-link" data-height="573" data-width="800">Enlarge</a> <span class="sep">/</span> Recreating this original Super Famicom circuit board purely in software is harder than it looks.</div><div class="caption-credit"><a rel="nofollow" class="caption-link" href="https://commons.wikimedia.org/wiki/File:SHVC-CPU-01_F_01.jpg">Wikimedia Commons</a></div></figcaption></figure><p>A clock is the core timing element of any system, and the SNES is designed to perform various tasks at certain frequencies and times.</p>
+<p>If you imagine a 100Hz clock, it is a device with a digital pin that transitions to logic high (+5 volts, for instance), and then back to logic low (0 volts, or ground) 100 times per second. So every second, the pin voltage will fluctuate 200 times total: 100 rising clock edges and 100 falling clock edges.</p>
+<p>A clock cycle is generally treated as one full transition, so a 100Hz clock would generate 100 clock cycles per second. There are some systems that require distinguishing between rising and falling edges, and for those, we break this further down into half-cycles to denote each phase (high or low) of the clock signal.</p>
+<p>The key goal of an authentic emulator is to perform tasks in exactly the same ways and at exactly the same times as the real hardware. It doesn't much matter specifically <i>how</i> the tasks are performed. All that matters is that the emulator, when given the same inputs, generates the same outputs with the same timing as real hardware.</p>
+<h3>Timing</h3>
+<p>Sometimes, operations happen over time. Take SNES CPU multiplication, for instance. Rather than pausing to wait for multiplication to complete, the SNES CPU calculates the multiplication result one bit at a time in the background over eight CPU opcode cycles. This allows your code to possibly do other things while waiting on the multiplication to complete.</p>
+<p>Any commercially released software is likely to wait those eight cycles, because if you try to read the result before it's ready, you will get a partially computed result instead. Yet earlier SNES emulators gave correct results <i>immediately</i>, without waiting these extra cycles.</p>
+<p>When hobbyists started creating and testing homebrew software via emulators, this discrepancy started to cause some problems. Some of this software, such as many early <i>Super Mario World</i> ROM hacks, only worked correctly on these earlier emulators, and not on real SNES hardware. That's because they were designed with the emulator's immediate (and inauthentic-to-real-hardware) multiplication results in mind.</p>
+<p>As emulators improved, this old software broke, and we have had to subsequently offer compatibility options in our newer emulators in order to not lose this software to time. Yes, as surreal as it is to say, these days our emulators have to emulate other emulators! How meta!</p>                                            <aside class="ad_wrapper" aria-label="In Content advertisement">
+    <span class="ad_notice">Advertisement </span>    
+    <div class="ad ad_instream"></div>    
+</aside>
+                                                        
+<p>The nice thing about the CPU multiplication delay is that it's very predictable: the eight computation cycles start immediately after requesting a multiplication. By writing code to read the results after every cycle, we were able to confirm that the SNES CPU was using the <a href="https://en.wikipedia.org/wiki/Booth%27s_multiplication_algorithm">Booth</a><a href="https://en.wikipedia.org/wiki/Booth%27s_multiplication_algorithm"> algorithm</a> for multiplication.</p>
+<h3>Clock Synchronization</h3>
+<p>Other operations are not so simple to model, since they happen asynchronously in the background. The SNES CPU's DRAM refresh is one such case.</p>
+<p>During the rendering of every scanline, at a certain point, the entire SNES CPU freezes for a short duration as the contents of the RAM chip are refreshed. This is needed because, as a cost-cutting measure, the SNES used dynamic RAM (rather than static RAM) for its main CPU memory. Dynamic RAM must be periodically refreshed in order to preserve its contents over time.</p>
+<figure class="image shortcode-img center large" style="width:640px"><a href="../../../../../cdn.arstechnica.net/wp-content/uploads/2020/03/snescarts.jpg" class="enlarge" data-height="1024" data-width="1024" alt="For a truly perfect emulator, just making ~3,500 commercially released SNES games playable isn't enough. Every function of the system has to be simulated with cycle-perfect accuracy, too."><img alt="For a truly perfect emulator, just making ~3,500 commercially released SNES games playable isn't enough. Every function of the system has to be simulated with cycle-perfect accuracy, too." src="../../../../../cdn.arstechnica.net/wp-content/uploads/2020/03/snescarts-640x640.jpg" width="640" height="640" srcset="https://cdn.arstechnica.net/wp-content/uploads/2020/03/snescarts.jpg 2x"></a><figcaption class="caption"><div class="caption-text"><a href="../../../../../cdn.arstechnica.net/wp-content/uploads/2020/03/snescarts.jpg" class="enlarge-link" data-height="1024" data-width="1024">Enlarge</a> <span class="sep">/</span> For a truly perfect emulator, just making ~3,500 commercially released SNES games playable isn't enough. Every function of the system has to be simulated with cycle-perfect accuracy, too.</div></figcaption></figure><p>The key insight to figuring out the precise timing of these operations was to take advantage of the SNES PPU’s horizontal and vertical counters. These counters advance and are reset after each horizontal and vertical blanking period. However, their precision is only a quarter of the SNES' CPU oscillator frequency; that is to say, the horizontal counter increments only once every four clock cycles.</p>
+<p>By reading the counters multiple times, I was able to determine which quarter of a clock cycle the counter was aligned with. By combining that insight with a specially crafted function that could step by a precise, user-specified number of clock cycles, it became possible to perfectly align the SNES CPU to any exact clock cycle position I wanted.</p>
+<p>By iterating over a range of clock cycles in a loop, I could determine exactly when certain operations (such as DRAM refresh, HDMA transfers, interrupt polling, etc.) would occur, and I was able to reproduce this precisely under emulation.</p>
+<p>The SNES <a href="http://www.vgmpf.com/Wiki/index.php?title=S-SMP">SMP chip</a> has its own timers as well, and similar reverse engineering was successful against that processor as well. I could spend an entire article talking about the SMP TEST register alone, which allows coders to control the clock divider of the SMP and its timers, among other horrible things. Suffice it to say that, while it was not an easy or fast process, we were ultimately victorious.</p>
+<h3>Collecting coprocessors</h3>
+<p><figure class="image shortcode-img right medium" style="width:300px"><a href="../../../../../cdn.arstechnica.net/wp-content/uploads/2020/03/superfx.jpg" class="enlarge" data-height="807" data-width="599" alt="The SuperFX chip is just one of many cartridge coprocessors that an SNES emulator has to handle correctly."><img alt="The SuperFX chip is just one of many cartridge coprocessors that an SNES emulator has to handle correctly." src="../../../../../cdn.arstechnica.net/wp-content/uploads/2020/03/superfx-300x404.jpg" width="300" height="404" srcset="https://cdn.arstechnica.net/wp-content/uploads/2020/03/superfx.jpg 2x"></a><figcaption class="caption"><div class="caption-text"><a href="../../../../../cdn.arstechnica.net/wp-content/uploads/2020/03/superfx.jpg" class="enlarge-link" data-height="807" data-width="599">Enlarge</a> <span class="sep">/</span> The SuperFX chip is just one of many cartridge coprocessors that an SNES emulator has to handle correctly.</div></figcaption></figure>There were a whole host of SNES coprocessors used inside various game cartridges that needed to be tamed as well. From dedicated general-purpose CPUs like the <a href="https://arstechnica.com/gaming/2017/07/nintendo-could-have-supported-super-fx-long-before-the-snes-classic/">SuperFX</a> and <a href="https://arstechnica.com/gaming/2019/05/28-years-later-hacker-fixes-rampant-slowdown-on-snes-gradius-iii/">SA-1</a>, to digital signal processors like the DSP-1 and Cx4, to decompression accelerators like the S-DD1 and SPC7110, to real-time clocks from Sharp and Epson, and more...</p>
+<p>That means an SNES emulator needs to be able to handle the instruction and pixel caches of the SuperFX; the memory bus conflict arbitrator of the SA-1 (which allowed the SNES CPU and SA-1 to share the same ROM and RAM chips simultaneously); the embedded firmware of the DSP-1 and Cx4; the prediction-based arithmetic coders of the S-DD1 and SPC7110; and the odd BCD (binary-coded decimal) edge cases of the real-time clocks. Slowly but surely, by applying the above techniques to determine correctness and timing, we were able to near-perfectly emulate all of these chips.</p>
+<p>It actually took a massive effort and thousands of dollars to decap and extract the programming firmware from the digital signal processors used in various games. In one instance, emulation of the NEC uPD772x led to <a href="https://www.sfchronicle.com/bayarea/article/The-Silicon-Valley-quest-to-preserve-Stephen-12759775.php">code from higan being used to save the late professor Stephen Hawking's voice!</a></p>
+<p>In another case, we had to reverse-engineer the entire instruction set of the Hitachi HG51B architecture, because this architecture was never publicly documented. In yet another, one game (<em>Hayazashi Nidan Morita Shougi 2</em>) ended up containing a full-blown 32-bit, 21MHz ARM6 CPU to accelerate its Japanese chess engine!</p>
+<p>Preserving all of the SNES coprocessors alone was a multi-year journey full of challenges and surprises.</p>
+<h3>Processing digital signal</h3>
+<p>Not to be confused with the DSP-1 cartridge coprocessor, the Sony S-DSP (digital signal processor) chip is what generated the distinctive sound from the SNES. This chip combined eight voice channels with 4-bit ADPCM encoding to produce a 16-bit stereo signal.</p>
+<p>On the surface, and per the system diagram from earlier, the DSP initially looks like a black box: you configure the voice channels and mixer settings and sit back as it generates sound to be sent to your speakers.</p>
+<p>But one key feature allowed a developer by the name of blargg to fully reverse-engineer this chip: the echo buffer. The SNES DSP has a feature that mixes the outputs from previous samples together to produce an echo effect. This happens at the very end of the audio generation process (aside from one last final mute flag that can be applied to silence all audio output.)</p>
+<p>By writing carefully cycle-timed code and monitoring those echo results, it became possible to discover the exact order of operations the SNES DSP would take to generate each sample and to produce cycle-accurate, bit-perfect audio.</p>
+
+                                                </div>
+
+            
+                            <nav class="page-numbers">Page: <span class="numbers">1 <a href="https://arstechnica.com/gaming/2020/04/how-snes-emulators-got-a-few-pixels-from-complete-perfection/2/">2</a> <a href="https://arstechnica.com/gaming/2020/04/how-snes-emulators-got-a-few-pixels-from-complete-perfection/3/">3</a> <a href="https://arstechnica.com/gaming/2020/04/how-snes-emulators-got-a-few-pixels-from-complete-perfection/2/"><span class="next">Next <span class="arrow">&rarr;</span></span></a></span></nav>
+            
+        </section>
+    </div>
+    <div class="xrail">
+        <div class="xrail-content">
+            
+            
+            
+                            <div class="ars-interlude-container ad_xrail ad_xrail_top"></div>
+            
+            
+                            <aside class="ad ad_xrail ad_xrail_top ad_xrail_last" aria-label="Top sidebar advertisement"></aside>
+                    </div>
+    </div>
+</div>
+
+<div class="column-wrapper">
+    <div class="left-column">
+        <div id="social-footer">
+            <a title="76 posters participating" class="comment-count icon-comment-bubble-down" href="https://arstechnica.com/gaming/2020/04/how-snes-emulators-got-a-few-pixels-from-complete-perfection/?comments=1">
+      <h4 class="comment-count-before">reader comments</h4>
+    
+  <span class="comment-count-number">99</span>
+  <span class="visually-hidden"> with 76 posters participating</span>
+  </a>
+  
+
+<div class="share-links">
+  <h4>Share this story</h4>
+  <ul>
+    <li><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Farstechnica.com%2F%3Fpost_type%3Dpost%26p%3D1662472" target="_blank" class="social-icon share-facebook" title="Share on Facebook"><span class="visually-hidden">Share on Facebook</span></a></li>
+    <li><a href="https://twitter.com/share?text=How+SNES+emulators+got+a+few+pixels+from+complete+perfection&url=https%3A%2F%2Farstechnica.com%2F%3Fpost_type%3Dpost%26p%3D1662472" target="_blank" class="social-icon share-twitter" title="Share on Twitter"><span class="visually-hidden">Share on Twitter</span></a></li>
+    <li><a href="https://www.reddit.com/submit?url=https%3A%2F%2Farstechnica.com%2F%3Fpost_type%3Dpost%26p%3D1662472&title=How+SNES+emulators+got+a+few+pixels+from+complete+perfection" target="_blank" class="social-icon share-reddit" title="Share on Reddit"><span class="visually-hidden">Share on Reddit</span></a></li>
+  </ul>
+</div>
+        </div>
+                    <!-- cache miss 305:single/author:3ab1675e3bc438ad89ea215c76b45f8b -->            </div>
+    <div class="xrail"></div>
+</div>
+<div id="article-footer-wrap">
+            <aside class="ad_wrapper" aria-label="Full width advertisement">
+    <span class="ad_notice">Advertisement </span>        
+    <div class="ad ad_fullwidth fullwidth"></div>
+</aside>
+    
+            <section id="comments-area" class="comments-area column-wrapper">
+  <div class="row comments-row left-column">
+    <a name="comments-bar"></a>
+          <div id="comments-container"></div>
+      <div id="comments-posting-container" class="thick-divide-bottom">
+        <p id="reply">You must <a href="https://arstechnica.com/civis/ucp.php?mode=login&return_to/gaming/2020/04/how-snes-emulators-got-a-few-pixels-from-complete-perfection/" class="vote_login">login or create an account</a> to comment.</p>
+      </div>
+      </div>
+    <div class="xrail xrail-comments">
+    <div class="xrail-content-wrapper">
+      <div class="xrail-content xrail-content-comments">
+          <aside class="ad ad_xrail ad_xrail_comments" aria-label="Comments sidebar advertisement"></aside>
+      </div>
+    </div>
+        <div class="xrail-content-wrapper xrail-content-wrapper-bottom">
+      <div class="xrail-content xrail-content-comments">
+          <aside class="ad ad_xrail ad_xrail_comments" aria-label="Comments sidebar advertisement"></aside>
+      </div>
+    </div>
+      </div>
+  </section>
+                    <section class="inline-playlist">
+  <div class='ars-video-playlist'>
+    <h3 class="ars-video-playlist-module-header">Channel <span>Ars Technica</span></h3>
+    <div class='ars-video-playlist-module' data-playlist-id='arstechnica-channel-ars-gaming' data-video-options='[]'></div>
+  </div>
+</section>
+                <div class="prev-next-links">
+  <a href="https://arstechnica.com/information-technology/2020/04/mongodbs-field-level-encryption-protects-private-data-even-from-dbas/" rel="prev"><span class="arrow">&larr;</span> Previous story</a>  <a href="https://arstechnica.com/gadgets/2020/04/microsoft-edge-is-becoming-the-browser-you-didnt-know-you-needed/" rel="next">Next story <span class="arrow">&rarr;</span></a></div>
+        <footer id="article-footer">
+  <div id="recommendations-footer">
+    <div id="story-recommendations">
+  <div class="heading-column">
+    <h3>Related Stories</h3>
+  </div>
+  <ul id="story-recs" class="rec-wrap"></ul>
+</div>
+        <div id="sponsored-recommendations">
+  <div class="OUTBRAIN" data-src="DROP_PERMALINK_HERE" data-widget-id="AR_14"></div>
+  <script type="text/javascript" async="async" src="../../../../../widgets.outbrain.com/outbrain.js"></script>
+</div>
+        <div id="latest-stories">
+  <div class="heading-column">
+    <h3>Today on Ars</h3>
+  </div>
+  <ul id="latest-recs" class="rec-wrap"></ul>
+</div>
+  </div>
+</footer>
+    </div>
+  </article>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="nav-footer">
+
+  <section>
+    <ul>
+      <li><a href="/store/">Store</a></li>
+      <li><a href="/store/product/subscriptions/">Subscribe</a></li>
+      <li><a href="/about-us/">About Us</a></li>
+      <li><a href="/rss-feeds/">RSS Feeds</a></li>
+      <li><a rel="nofollow" href="http://arstechnica.com/gaming/2020/04/how-snes-emulators-got-a-few-pixels-from-complete-perfection/?view=mobile">View Mobile Site</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <ul>
+      <li><a href="/contact-us/">Contact Us</a></li>
+      <li><a href="/staff-directory/">Staff</a></li>
+      <li><a href="/advertise-with-us/">Advertise with us</a></li>
+      <li><a href="/reprints/">Reprints</a></li>
+    </ul>
+  </section>
+
+  <section class="footer-newsletter">
+    <div class="newsletter-wrapper">
+      <h3>
+        <a href="/newsletters/">Newsletter Signup</a>
+      </h3>
+      <p>Join the Ars Orbital Transmission mailing list to get weekly updates delivered to your inbox.</p>
+      <a class="button" href="/newsletters/">Sign me up &rarr;</a>
+    </div>
+  </section>
+
+</nav>
+
+<section class="footer-terms-logo">
+  <div class="cn-logo">
+    <a href="http://condenast.com/" class="icon icon-logo-cn-us" title="Visit Condé Nast"></a>
+  </div>
+
+  <p id="copyright-terms">
+  CNMN Collection<br>
+  WIRED Media Group<br>
+  © 2021 Condé Nast. All rights reserved. Use of and/or registration on any portion of this site constitutes acceptance of our <a href="https://www.condenast.com/user-agreement/">User Agreement</a> (updated 1/1/20) and <a href="https://www.condenast.com/privacy-policy/">Privacy Policy and Cookie Statement</a> (updated 1/1/20) and <a href="/amendment-to-conde-nast-user-agreement-privacy-policy/">Ars Technica Addendum</a> (effective 8/21/2018). Ars may earn compensation on sales from links on this site. <a href="/affiliate-link-policy/">Read our affiliate link policy</a>.<br>
+  <a href="https://www.condenast.com/privacy-policy/#california">Your California Privacy Rights</a> | <a id="ot-sdk-btn" class="ot-sdk-show-settings">Do Not Sell My Personal Information</a><br>
+  The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of Condé Nast.<br>
+  <a href="https://www.condenast.com/online-behavioral-advertising-oba-and-how-to-opt-out-of-oba/#clickheretoreadmoreaboutonlinebehavioraladvertising(oba)">Ad Choices</a>
+</p>
+</section>
+  </footer>
+</div>
+
+<script type="text/javascript" src="../../../../../cdn.arstechnica.net/wp-content/themes/ars/assets/js/main-f2296fa805.js"></script>
+
+
+<!-- cache hit 305:single/javascript-footer:dbe4613475e9b326988d1cd5f1229f76 -->
+        
+
+
+  
+  <!-- Parse.ly start -->
+<script id="parsely-cfg" src="../../../../../fpa-cdn.arstechnica.com/keys/arstechnica.com/p.js"></script>
+<!-- Parse.ly end -->
+
+
+
+
+<script src="../../../../../player.cnevids.com/interlude/arstechnica.js" async></script>
+<script id="conde-polar" src="../../../../../cdn.mediavoice.com/nativeads/script/condenastcorporate/conde-asa-polar-master.js" async></script>
+<script>
+  (function () {
+      function DQ() {
+        var queue = window.sparrowQueue;
+        this.push = fn => fn();
+        window.sparrowQueue = this;
+        while (queue.length) {
+          queue.shift()();
+        }
+      }
+      function e(t, e) {
+        var n, a, o;
+        a = !1, n = document.createElement("script"), n.type = "text/javascript", n.src = t, n.onload = n.onreadystatechange = function () {
+          a || this.readyState && "complete" != this.readyState || (a = !0, e ? e() : !0)
+        }, o = document.getElementsByTagName("script")[0], o.parentNode.insertBefore(n, o)
+      }
+      if (location.search.indexOf('no_sparrow') < 0) {
+        e("https://pixel.condenastdigital.com/config/v2/production/ars-technica.config.js", function () {
+          e("https://pixel.condenastdigital.com/sparrow.min.js", function () {
+            if (window.SparrowConfigV2) {
+              window.sparrow = new window.Sparrow(window.SparrowConfigV2);
+              new DQ();
+            }
+          })
+        })
+      }
+    })();
+</script>
+<script type="text/javascript" src="../../../../../s.skimresources.com/js/100098X1555750.skimlinks.js"></script>
+</body>
+</html>
