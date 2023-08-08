@@ -1,5 +1,7 @@
 # Near's Respite
 
+![Near's Respite](/archive/near.sh/images/logo.png)
+
 This is an archive of near.sh, higan.dev, bsnes.dev and ares.dev along with the files and outlinks on the website as they appeared on 2021-06-29.
 
 ## Accessing the archive
