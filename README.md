@@ -4,7 +4,7 @@ This is an archive of near.sh, higan.dev, bsnes.dev and ares.dev along with the 
 
 ## Accessing the archive
 
-You can visit [boytwink.github.io/near.sh](https://boytwink.github.io/near.sh) to view the archive online. If you would like a local copy, you should download [warc.tar.gz](warc.tar.gz).
+You can visit [web-archives.github.io/near.sh](https://web-archives.github.io/near.sh) to view the archive online. If you would like a local copy, you should download [warc.tar.gz](warc.tar.gz).
 
 ## Info
 
